@@ -9,7 +9,7 @@
         body {
             margin: 0;
             padding: 0;
-            padding-top: 280px;
+            padding-top: 280px; /* 预留标题和导航栏高度，避免内容遮挡 */
         }
 
         .main-title {
@@ -28,10 +28,10 @@
 
         nav {
             background-color: #000;
-            padding: 20px 0;
+            padding: 20px 0; /* 增大导航栏高度 */
             text-align: center;
             position: fixed;
-            top: 27px;
+            top: 27px; /* 紧接标题下方 */
             left: 0;
             right: 0;
             z-index: 99;
@@ -39,11 +39,11 @@
 
         nav a {
             color: #fff;
-            font-size: 45px;
+            font-size: 45px; /* 导航文字放大 */
             font-weight: bold;
-            margin: 0 60px;
+            margin: 0 60px; /* 增大间距 */
             text-decoration: none;
-            padding: 10px 20px;
+            padding: 10px 20px; /* 增大点击区域 */
             border-radius: 8px;
         }
 
@@ -51,27 +51,54 @@
             background-color: #ff0000;
         }
 
-        .download-content {
+        /* 内容区域 */
+        .content-container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
-            font-family: SimSun, 宋体, serif;
         }
 
+        /* 下载页内容样式 */
         .download-title {
-            font-size: 25px;
+            font-size: 35px;
+            font-family: "华文行楷", STXingKai, serif;
+            text-align: center;
             margin: 20px 0;
+            font-weight: normal;
+        }
+
+        .download-section h3 {
+            font-size: 20px;
+            font-family: SimSun, 宋体, serif;
+            margin: 15px 0 8px 0;
+        }
+
+        .download-content {
+            font-size: 10px;
+            font-family: SimSun, 宋体, serif;
+            line-height: 1.8;
+            margin: 0 0 12px 20px;
         }
 
         .download-list {
-            font-size: 16px;
+            font-size: 10px;
+            font-family: SimSun, 宋体, serif;
             line-height: 2;
-            margin-left: 20px;
+            margin-left: 45px;
+            list-style-type: disc;
         }
 
         .download-list a {
             color: #0000ff;
             text-decoration: underline;
+        }
+
+        .download-footer {
+            font-size: 10px;
+            font-family: SimSun, 宋体, serif;
+            margin: 20px 0;
+            text-align: left;
+            padding-left: 20px;
         }
     </style>
 </head>
@@ -83,5 +110,16 @@
         <a href="download.html" class="active">下载</a>
         <a href="other.html">其他</a>
     </nav>
+
+    <div class="content-container">
+        <div class="download-title">大聪明战队相关资源下载</div>
+
+            <div class="download-footer">
+                所有资源均为大聪明战队内部资料，仅供战队成员学习交流使用<br>
+                如有下载问题，请在"其他"页面的留言板反馈<br>
+                大聪明战队宣
+            </div>
+        </div>
+    </div>
 </body>
 </html>
