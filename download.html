@@ -3,18 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>下载页面</title>
+    <title>下载页 - 大聪明战队</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            padding-top: 280px;
+        }
+
+        .main-title {
+            font-size: 130px;
+            font-family: "华文行楷", STXingKai, serif;
+            text-align: center;
+            margin: 0;
+            padding: 20px 0;
+            background-color: #fff;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+        }
+
+        nav {
+            background-color: #000;
+            padding: 20px 0;
+            text-align: center;
+            position: fixed;
+            top: 27px;
+            left: 0;
+            right: 0;
+            z-index: 99;
+        }
+
+        nav a {
+            color: #fff;
+            font-size: 45px;
+            font-weight: bold;
+            margin: 0 60px;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+        }
+
+        nav a.active {
+            background-color: #ff0000;
+        }
+
+        .download-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            font-family: SimSun, 宋体, serif;
+        }
+
+        .download-title {
+            font-size: 25px;
+            margin: 20px 0;
+        }
+
+        .download-list {
+            font-size: 16px;
+            line-height: 2;
+            margin-left: 20px;
+        }
+
+        .download-list a {
+            color: #0000ff;
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <img src="../../picture/header.jpg" alt="网页头部图片">
-    </header>
+    <h1 class="main-title">大聪明战队（粑粑战队）</h1>
+
     <nav>
-        <a href="index.html">首页</a> <!-- 首页超链接 -->
-        <a href="download.html" class="active">下载</a> <!-- 下载页超链接 -->
-        <a href="other.html">其他</a> <!-- 其他页超链接 -->
+        <a href="index.html">首页</a>
+        <a href="download.html" class="active">下载</a>
+        <a href="other.html">其他</a>
     </nav>
 </body>
 </html>
-    

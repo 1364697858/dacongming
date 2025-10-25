@@ -3,32 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>网页标题</title>
+    <title>大聪明战队首页</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            padding-top: 280px; /* 预留标题和导航栏高度，避免内容遮挡 */
+        }
+
+        /* 顶部大标题（130号华文行楷） */
+        .main-title {
+            font-size: 130px;
+            font-family: "华文行楷", STXingKai, serif;
+            text-align: center;
+            margin: 0;
+            padding: 20px 0;
+            background-color: #fff;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+        }
+
+        /* 导航栏（放大尺寸，紧接标题下方） */
+        nav {
+            background-color: #000;
+            padding: 20px 0; /* 增大导航栏高度 */
+            text-align: center;
+            position: fixed;
+            top: 27px; /* 紧接标题下方（标题高度约200px） */
+            left: 0;
+            right: 0;
+            z-index: 99;
+        }
+
+        nav a {
+            color: #fff;
+            font-size: 45px; /* 导航文字放大 */
+            font-weight: bold;
+            margin: 0 60px; /* 增大间距 */
+            text-decoration: none;
+            padding: 10px 20px; /* 增大点击区域 */
+            border-radius: 8px;
+        }
+
+        nav a.active {
+            background-color: #ff0000;
+        }
+
+        /* 内容区域 */
+        .content-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* 战队介绍样式 */
+        .team-title {
+            font-size: 35px;
+            font-family: "华文行楷", STXingKai, serif;
+            text-align: center;
+            margin: 20px 0;
+            font-weight: normal;
+        }
+        .team-section h3 {
+            font-size: 20px;
+            font-family: SimSun, 宋体, serif;
+            margin: 15px 0 8px 0;
+        }
+        .team-content {
+            font-size: 10px;
+            font-family: SimSun, 宋体, serif;
+            line-height: 1.8;
+            margin: 0 0 12px 20px;
+        }
+        .team-content ul {
+            list-style-type: disc;
+            margin-left: 25px;
+        }
+        .team-content li {
+            margin: 6px 0;
+        }
+        .team-footer {
+            font-size: 10px;
+            font-family: SimSun, 宋体, serif;
+            margin: 20px 0;
+            text-align: left;
+            padding-left: 20px;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <img src="../../picture/header.jpg" alt="网页头部图片">
-    </header>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>网页标题</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <img src="W:/picture/header.jpg" alt="网页头部图片">
-    </header>
+    <h1 class="main-title">大聪明战队（粑粑战队）</h1>
+
     <nav>
-    <a href="index.html" class="active">首页</a> <!-- 只加了index.html -->
-    <a href="download.html">下载</a> <!-- 只加了download.html -->
-    <a href="other.html">其他</a> <!-- 只加了other.html -->
-</nav>
+        <a href="index.html" class="active">首页</a>
+        <a href="download.html">下载</a>
+        <a href="other.html">其他</a>
+    </nav>
+
+    <div class="content-container">
+        <div class="team-title">大聪明战队粑粑战队</div>
+
+        <div class="team-section">
+            <h3>简介：</h3>
+            <div class="team-content">
+                <ul>
+                    <li>1. 领导人刘某某</li>
+                    <li>2. 产生的直接原因：华北野战军的建立</li>
+                    <li>3. 制度：队长立宪制</li>
+                    <li>4. 不平等，但民主</li>
+                    <li>5. 建立时间2022年，正式建立时间2024年12月24日</li>
+                    <li>6. 2024年12月27日，余东泽正式加入粑粑战队，成为正式建立之后第1个加入粑粑战队的人</li>
+                    <li>7. 2025年1月19日，大队长决定把粑粑战队改名为大聪明战队，但不改变队旗和队徽</li>
+                    <li>8. 大队长在2025年2月21日制定了《大聪明战队（粑粑战队）宪法2025》，于2025年2月22日开始实施</li>
+                    <li>9. 2025年5月4日召开大聪明战队（粑粑战队）第一届代表大会，及第1次常委员会（但是由于有新的人加入，所以大队长决定在2025年端午节的时候举行第2次常务委员会）</li>
+                </ul>
+            </div> 
+        <div class="team-footer">
+            想了解更多内容下载豆包APP搜索大聪明战队就可以搜到关于大聪明战队大队长做的好多智能体，如：大聪明战队、大聪战队考试1、大聪明战队考试2、大聪明战队考试3、大聪明战队公告1、大聪明战队公告2、大聪明战队知识点汇总……<br>
+            大聪明战队宣
+        </div>
+    </div>
 </body>
 </html>
-    
