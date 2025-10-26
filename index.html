@@ -9,48 +9,55 @@
         body {
             margin: 0;
             padding: 0;
-            padding-top: 280px; /* 预留标题和导航栏高度，避免内容遮挡 */
+            padding-top: calc(var(--title-height) + var(--nav-height));
         }
 
-        /* 顶部大标题（130号华文行楷） */
+        /* 顶部大标题（确保单行显示） */
         .main-title {
-            font-size: 130px;
+            font-size: clamp(2rem, 8vw, 8rem);
             font-family: "华文行楷", STXingKai, serif;
             text-align: center;
             margin: 0;
-            padding: 20px 0;
+            padding: 0.5rem 0;
             background-color: #fff;
             position: fixed;
             top: 0;
             left: 0;
             right: 0;
             z-index: 100;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
 
-        /* 导航栏（放大尺寸，紧接标题下方） */
+        /* 导航栏（确保单行显示） */
         nav {
             background-color: #000;
-            padding: 20px 0; /* 增大导航栏高度 */
+            padding: 0.rem 0;
             text-align: center;
             position: fixed;
-            top: 27px; /* 紧接标题下方（标题高度约200px） */
+            top: var(--title-height);
             left: 0;
             right: 0;
             z-index: 99;
+            white-space: nowrap;
+            overflow: hidden;
         }
 
         nav a {
             color: #fff;
-            font-size: 45px; /* 导航文字放大 */
+            font-size: clamp(1rem, 4vw, 2.5rem);
             font-weight: bold;
-            margin: 0 60px; /* 增大间距 */
+            margin: 0 clamp(0.5rem, 3vw, 3rem);
             text-decoration: none;
-            padding: 10px 20px; /* 增大点击区域 */
+            padding: 0.5rem 1rem;
             border-radius: 8px;
+            display: inline-block;
         }
 
         nav a.active {
             background-color: #ff0000;
+            padding: 0.1rem 0;
         }
 
         /* 内容区域 */
@@ -58,6 +65,70 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
+        }
+
+        /* 统计信息区域 */
+        .stats-section {
+            text-align: center;
+            margin-bottom: 30px;
+            font-family: "楷体", KaiTi, serif;
+            font-size: 30px;
+        }
+        
+        .stats-item {
+            margin: 10px 0;
+        }
+        
+        .number-box {
+            display: inline-block;
+            background-color: #e6f3ff;
+            padding: 0 8px;
+            border-radius: 4px;
+            margin: 0 5px;
+        }
+
+        /* 主要内容布局 */
+        .main-content {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .left-column, .right-column {
+            width: 48%;
+            min-width: 300px;
+        }
+
+        /* 领导班子和新闻框样式 */
+        .outer-box {
+            border: 1px solid #000;
+            padding: 15px;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        
+        .inner-box {
+            border: 1px solid #000;
+            padding: 15px;
+            min-height: 200px;
+            margin-top: 16px;
+        }
+        
+        .box-title {
+            font-size: 16px;
+            margin: 0;
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            z-index: 1;
+            background-color: #fff;
+            padding: 0 5px;
+        }
+
+        /* 原内容区域 */
+        .original-content {
+            margin-top: 20px;
         }
 
         /* 战队介绍样式 */
@@ -93,6 +164,46 @@
             text-align: left;
             padding-left: 20px;
         }
+
+        /* 更新公告样式 */
+        .update-notice {
+            border: 1px solid #000;
+            padding: 15px;
+            margin-left: 60px;
+        }
+        
+        .update-title {
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        .update-item {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        
+        .update-version {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .update-content {
+            text-indent: 2em;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 768px) {
+            .left-column, .right-column {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+            
+            .update-notice {
+                margin-left: 0;
+            }
+        }
     </style>
 </head>
 <body>
@@ -107,25 +218,129 @@
     <div class="content-container">
         <div class="team-title">大聪明战队粑粑战队</div>
 
-        <div class="team-section">
-            <h3>简介：</h3>
-            <div class="team-content">
-                <ul>
-                    <li>1. 领导人刘某某</li>
-                    <li>2. 产生的直接原因：华北野战军的建立</li>
-                    <li>3. 制度：队长立宪制</li>
-                    <li>4. 不平等，但民主</li>
-                    <li>5. 建立时间2022年，正式建立时间2024年12月24日</li>
-                    <li>6. 2024年12月27日，余东泽正式加入粑粑战队，成为正式建立之后第1个加入粑粑战队的人</li>
-                    <li>7. 2025年1月19日，大队长决定把粑粑战队改名为大聪明战队，但不改变队旗和队徽</li>
-                    <li>8. 大队长在2025年2月21日制定了《大聪明战队（粑粑战队）宪法2025》，于2025年2月22日开始实施</li>
-                    <li>9. 2025年5月4日召开大聪明战队（粑粑战队）第一届代表大会，及第1次常委员会（但是由于有新的人加入，所以大队长决定在2025年端午节的时候举行第2次常务委员会）</li>
-                </ul>
-            </div> 
+        <!-- 统计信息区域 -->
+        <div class="stats-section">
+            <div class="stats-item">
+                本网站已创建 
+                <span class="number-box" id="days">0</span>天 
+                <span class="number-box" id="hours">0</span>小时 
+                <span class="number-box" id="minutes">0</span>分钟 
+                <span class="number-box" id="seconds">0</span>秒
+            </div>
+            <div class="stats-item">
+                本网站已被访问 
+                <span class="number-box" id="visitCount">0</span>次
+            </div>
+        </div>
+
+        <!-- 主要内容区域 -->
+        <div class="main-content">
+            <!-- 左半部分 -->
+            <div class="left-column">
+                <!-- 领导班子框 -->
+                <div class="outer-box">
+                    <div class="box-title">领导班子</div>
+                    <div class="inner-box">
+                        <!-- 内容暂不填写 -->
+                    </div>
+                </div>
+
+                <!-- 原内容部分 -->
+                <div class="original-content team-section">
+                    <h3>简介：</h3>
+                    <div class="team-content">
+                        <ul>
+                            <li>1. 领导人刘某某</li>
+                            <li>2. 产生的直接原因：华北野战军的建立</li>
+                            <li>3. 制度：队长立宪制</li>
+                            <li>4. 不平等，但民主</li>
+                            <li>5. 建立时间2022年，正式建立时间2024年12月24日</li>
+                            <li>6. 2024年12月27日，余东泽正式加入粑粑战队，成为正式建立之后第1个加入粑粑战队的人</li>
+                            <li>7. 2025年1月19日，大队长决定把粑粑战队改名为大聪明战队，但不改变队旗和队徽</li>
+                            <li>8. 大队长在2025年2月21日制定了《大聪明战队（粑粑战队）宪法2025》，于2025年2月22日开始实施</li>
+                            <li>9. 2025年5月4日召开大聪明战队（粑粑战队）第一届代表大会，及第1次常委员会（但是由于有新的人加入，所以大队长决定在2025年端午节的时候举行第2次常务委员会）</li>
+                        </ul>
+                    </div> 
+                </div>
+            </div>
+
+            <!-- 右半部分 -->
+            <div class="right-column">
+                <!-- 新闻框 -->
+                <div class="outer-box">
+                    <div class="box-title">新闻</div>
+                    <div class="inner-box">
+                        <!-- 内容暂不填写 -->
+                    </div>
+                </div>
+
+                <!-- 更新公告框 -->
+                <div class="update-notice">
+                    <div class="update-title">更新公告</div>
+                    <div class="update-item">
+                        <div class="update-version">1.0.0</div>
+                        <div class="update-content">第一个正式版本</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="team-footer">
             想了解更多内容下载豆包APP搜索大聪明战队就可以搜到关于大聪明战队大队长做的好多智能体，如：大聪明战队、大聪战队考试1、大聪明战队考试2、大聪明战队考试3、大聪明战队公告1、大聪明战队公告2、大聪明战队知识点汇总……<br>
             大聪明战队宣
         </div>
     </div>
+
+    <script>
+        // 网站创建时间：2025年10月12日11:34:00
+        const createTime = new Date(2025, 9, 12, 11, 34, 0);
+        
+        // 更新时间统计
+        function updateTimeStats() {
+            const now = new Date();
+            const diff = now - createTime;
+            
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+            
+            document.getElementById('days').textContent = days;
+            document.getElementById('hours').textContent = hours;
+            document.getElementById('minutes').textContent = minutes;
+            document.getElementById('seconds').textContent = seconds;
+        }
+        
+        // 初始化并定时更新时间统计
+        updateTimeStats();
+        setInterval(updateTimeStats, 1000);
+        
+        // 获取并更新访问次数
+        async function updateVisitCount() {
+            try {
+                const response = await fetch('http://127.0.0.1:5001/visits');
+                const data = await response.json();
+                document.getElementById('visitCount').textContent = data.count;
+            } catch (error) {
+                console.error('获取访问次数失败:', error);
+            }
+        }
+        
+        // 动态计算标题和导航栏高度
+        function updateHeights() {
+            const title = document.querySelector('.main-title');
+            const nav = document.querySelector('nav');
+            document.documentElement.style.setProperty('--title-height', `${title.offsetHeight}px`);
+            document.documentElement.style.setProperty('--nav-height', `${nav.offsetHeight}px`);
+        }
+        
+        // 页面加载和窗口大小改变时更新高度
+        window.onload = function() {
+            updateVisitCount();
+            updateHeights();
+        };
+        
+        window.onresize = updateHeights;
+    </script>
 </body>
 </html>
