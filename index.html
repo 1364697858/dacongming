@@ -30,10 +30,10 @@
             text-overflow: ellipsis;
         }
 
-        /* 导航栏（确保单行显示） */
+        /* 导航栏（确保单行显示）- 已调小尺寸 */
         nav {
             background-color: #000;
-            padding: 0.5rem 0;
+            padding: 0.3rem 0; /* 减小内边距 */
             text-align: center;
             position: fixed;
             top: var(--title-height);
@@ -46,11 +46,11 @@
 
         nav a {
             color: #fff;
-            font-size: clamp(1rem, 4vw, 2.5rem);
+            font-size: clamp(0.8rem, 3vw, 1.8rem); /* 减小字体大小 */
             font-weight: bold;
-            margin: 0 clamp(0.5rem, 3vw, 3rem);
+            margin: 0 clamp(0.3rem, 2vw, 2rem); /* 减小间距 */
             text-decoration: none;
-            padding: 0.5rem 1rem;
+            padding: 0.3rem 0.8rem; /* 减小内边距 */
             border-radius: 8px;
             display: inline-block;
         }
@@ -140,25 +140,23 @@
         .members-container {
             display: flex;
             padding: 15px;
+            flex-direction: column;
         }
         
-        .member-category {
-            width: 33.333%;
+        .member-row {
+            display: flex;
+            margin-bottom: 20px;
             font-family: "仿宋", FangSong, serif;
             font-size: 20px;
         }
         
-        .member-category div {
-            margin-bottom: 20px; /* 每个类别项间隔一行 */
+        .member-category {
+            width: 33.333%;
         }
         
         .member-list {
             width: 66.666%;
-            text-align: center;
-        }
-        
-        .member-item {
-            margin-bottom: 20px; /* 与左侧类别项间隔对应 */
+            text-align: left;
         }
 
         /* 原内容区域 */
@@ -261,6 +259,58 @@
             margin: 5px 0;
         }
 
+        /* 新闻区域样式 */
+        .news-outer-box {
+            min-height: 280px; /* 增加高度以容纳指示器 */
+        }
+        
+        .news-inner-container {
+            position: relative;
+            width: 100%;
+            height: 220px;
+            overflow: hidden;
+        }
+        
+        .news-slider {
+            display: flex;
+            width: 300%;
+            height: 100%;
+            transition: transform 0.5s ease;
+        }
+        
+        .news-slide {
+            width: 33.333%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            box-sizing: border-box;
+            font-size: 18px;
+            text-align: center;
+        }
+        
+        /* 新闻指示器样式 */
+        .news-indicators {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+            gap: 10px;
+            position: static;
+        }
+        
+        .news-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #aaa; /* 浅灰色 */
+            transition: background-color 0.3s;
+            cursor: pointer;
+        }
+        
+        .news-dot.active {
+            background-color: #333; /* 深灰色 */
+        }
+
         /* 响应式调整 */
         @media (max-width: 768px) {
             .left-column, .right-column {
@@ -296,7 +346,7 @@
                 <span class="number-box" id="seconds">0</span>秒
             </div>
             <div class="stats-item">
-                截至2025年10月31日本网站已被访问 <span class="number-box">3047</span>次
+                截至2025年10月31日本网站已被访问 <span class="number-box">3371</span>次
             </div>
         </div>
 
@@ -349,10 +399,22 @@
             <!-- 右半部分 - 新闻、战队成员和更新公告 -->
             <div class="right-column">
                 <!-- 新闻框（向上移动50px） -->
-                <div class="outer-box" style="margin-bottom: -30px;">
+                <div class="outer-box news-outer-box" style="margin-bottom: -30px;">
                     <div class="box-title">新闻</div>
-                    <div class="inner-box" style="min-height: 204px;">
-                        大队长在他的抖音号里发布了队徽Logo视频。
+                    <div class="inner-box">
+                        <div class="news-inner-container">
+                            <div class="news-slider" id="newsSlider">
+                                <div class="news-slide">大队长在他的抖音号里发布了队徽Logo视频。</div>
+                                <div class="news-slide">大聪明战队(粑粑战队)网络与软件儿设计和编写组于2025年11月21日成立。</div>
+                                <div class="news-slide">大队长制作了软件。</div>
+                            </div>
+                        </div>
+                        <!-- 新闻指示器 -->
+                        <div class="news-indicators" id="newsIndicators">
+                            <div class="news-dot active" data-index="0"></div>
+                            <div class="news-dot" data-index="1"></div>
+                            <div class="news-dot" data-index="2"></div>
+                        </div>
                     </div>
                 </div>
 
@@ -361,25 +423,29 @@
                     <div class="box-title">战队成员</div>
                     <div class="inner-box">
                         <div class="members-container">
-                            <div class="member-category">
-                                <div>绝对领导</div>
-                                <div>高级领导</div>
-                                <div>骨干领导</div>
-                                <div>名誉领导</div>
-                                <div>基层领导</div>
-                                <div>非领导人员</div>
+                            <div class="member-row">
+                                <div class="member-category">绝对领导</div>
+                                <div class="member-list">刘某某</div>
                             </div>
-                            <div class="member-list">
-                                <div class="member-item" style="font-size: 15px;">刘某某</div>
-                                <div class="member-item" style="font-size: 13px;">杜某某</div>
-                                <!-- 正数第2行和正数第3行之间增加一行空格 -->
-                                <div class="member-item" style="font-size: 10px; visibility: hidden;">&nbsp;</div>
-                                <div class="member-item" style="font-size: 12px;">余某某 于某某</div>
-                                <!-- 正数第3行和正数第4行中间减少一行空格（移除之前添加的空格） -->
-                                <div class="member-item" style="font-size: 10px;">刘某某 王某某</div>
-                                <div class="member-item" style="font-size: 10px;">黄某某 王某某 陈某某 焦某某</div>
-                                <!-- 倒数第1行和倒数第2行中间减少一行空格（移除空格） -->
-                                <div class="member-item" style="font-size: 10px;">卜某某 刘某某 蔡某某 焦某</div>
+                            <div class="member-row">
+                                <div class="member-category">高级领导</div>
+                                <div class="member-list">杜某某</div>
+                            </div>
+                            <div class="member-row">
+                                <div class="member-category">骨干领导</div>
+                                <div class="member-list">余某某 于某某</div>
+                            </div>
+                            <div class="member-row">
+                                <div class="member-category">名誉领导</div>
+                                <div class="member-list">刘某某 王某某</div>
+                            </div>
+                            <div class="member-row">
+                                <div class="member-category">基层领导</div>
+                                <div class="member-list">黄某某 王某某 陈某某 焦某某</div>
+                            </div>
+                            <div class="member-row">
+                                <div class="member-category">非领导人员</div>
+                                <div class="member-list">卜某某 刘某某 蔡某某 焦某</div>
                             </div>
                         </div>
                     </div>
@@ -388,7 +454,16 @@
                 <!-- 更新公告框 -->
                 <div class="update-notice">
                     <div class="update-title">更新公告</div>
-                    <!-- 删除1.2.0版本内容 -->
+                    <!-- 新增1.1.1版本 -->
+                    <div class="update-item">
+                        <div class="update-version">1.1.1</div>
+                        <div class="update-content">
+                            <ul>
+                                <li>下载新增一个Windows软件</li>
+                                <li>新闻内容更新</li>
+                            </ul>
+                        </div>
+                    </div>
                     <div class="update-item">
                         <div class="update-version">1.1.0</div>
                         <div class="update-content">
@@ -455,9 +530,61 @@
         // 页面加载和窗口大小改变时更新高度
         window.onload = function() {
             updateHeights();
+            initNewsSlider(); // 初始化新闻轮播
         };
         
         window.onresize = updateHeights;
+
+        // 新闻轮播功能
+        function initNewsSlider() {
+            const newsSlider = document.getElementById('newsSlider');
+            const newsDots = document.querySelectorAll('.news-dot');
+            let currentIndex = 0;
+            let slideInterval;
+
+            // 点击指示器切换新闻
+            newsDots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    // 停止自动轮播
+                    clearInterval(slideInterval);
+                    // 立即切换到指定索引
+                    currentIndex = index;
+                    updateSliderPosition();
+                    updateDotStates();
+                    // 重新开始自动轮播
+                    startAutoSlide();
+                });
+            });
+
+            // 开始自动轮播
+            function startAutoSlide() {
+                slideInterval = setInterval(() => {
+                    // 始终向右（递增）方向轮播
+                    currentIndex = (currentIndex + 1) % 3;
+                    updateSliderPosition();
+                    updateDotStates();
+                }, 2000);
+            }
+
+            // 初始化自动轮播
+            startAutoSlide();
+
+            // 更新滑块位置
+            function updateSliderPosition() {
+                newsSlider.style.transform = `translateX(-${currentIndex * 33.333}%)`;
+            }
+
+            // 更新指示器状态
+            function updateDotStates() {
+                newsDots.forEach((dot, index) => {
+                    if (index === currentIndex) {
+                        dot.classList.add('active');
+                    } else {
+                        dot.classList.remove('active');
+                    }
+                });
+            }
+        }
     </script>
 </body>
 </html>
