@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>联系我们 - 大聪明大队（粑粑大队）</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 头部导航 -->
+    <header class="header">
+        <div class="header-content">
+            <!-- 左侧标志和名称 -->
+            <div class="logo-section">
+                <img src="队徽.jpg" alt="队徽" class="logo">
+                <div class="gov-info">
+                    <h1 class="gov-name">大聪明大队（粑粑大队）</h1>
+                    <a href="https://1364697858.github.io/dacongming/" class="gov-link">1364697858.github.io/dacongming</a>
+                    <div class="welcome-message" id="welcome-message"></div>
+                </div>
+            </div>
+            
+            <!-- 右侧搜索和导航 -->
+            <div class="right-section">
+                <!-- 搜索框 -->
+                <div class="search-box">
+                    <input type="text" placeholder="搜索" class="search-input" id="search-input">
+                    <button class="search-btn" id="search-btn">🔍</button>
+                </div>
+                
+                <!-- 搜索结果 -->
+                <div class="search-results" id="search-results" style="display: none;">
+                    <div class="search-results-header">搜索结果</div>
+                    <div class="search-results-content" id="search-results-content">
+                        <div class="search-result-item" data-target="main-content">
+                            <div class="result-title">大聪明大队</div>
+                            <div class="result-desc">大聪明大队（粑粑大队）成立于2022年，是一支充满活力和创造力的团队。</div>
+                        </div>
+                        <div class="search-result-item" data-target="main-content">
+                            <div class="result-title">茅房</div>
+                            <div class="result-desc">茅房是大聪明大队（粑粑大队）的别称，象征着团队的幽默和活力。</div>
+                        </div>
+                        <div class="search-result-item" data-target="main-content">
+                            <div class="result-title">粑粑大队</div>
+                            <div class="result-desc">大聪明大队（粑粑大队）成立于2022年，是一支充满活力和创造力的团队。</div>
+                        </div>
+                        <div class="search-result-item" data-target="leadership-members-section">
+                            <div class="result-title">领导班子</div>
+                            <div class="result-desc">大队长、书记：刘某某；副大队长：刘某某</div>
+                        </div>
+                        <div class="search-result-item" data-target="leadership-members-section">
+                            <div class="result-title">成员栏</div>
+                            <div class="result-desc">包含支队队长、纪律委员会委员长、支队副队长、普通队员等成员信息。</div>
+                        </div>
+                        <div class="search-result-item" data-target="news-section">
+                            <div class="result-title">新闻动态</div>
+                            <div class="result-desc">包含最新的新闻动态和版本更新信息。</div>
+                        </div>
+                        <div class="search-result-item" data-target="updates-intro-section">
+                            <div class="result-title">发展历史</div>
+                            <div class="result-desc">大聪明大队的发展历程和重要里程碑。</div>
+                        </div>
+                        <div class="search-result-item" data-target="updates-intro-section">
+                            <div class="result-title">版本更新</div>
+                            <div class="result-desc">网站版本更新历史和功能改进记录。</div>
+                        </div>
+                        <div class="search-result-item" data-target="time-section">
+                            <div class="result-title">成立时间</div>
+                            <div class="result-desc">大聪明大队成立于2022年，2024年12月24日正式成立。</div>
+                        </div>
+                        <div class="search-result-item" data-target="team-footer">
+                            <div class="result-title">官方网站</div>
+                            <div class="result-desc">https://1364697858.github.io/dacongming/</div>
+                        </div>
+                        <div class="search-result-item" data-target="team-footer">
+                            <div class="result-title">豆包</div>
+                            <div class="result-desc">想了解更多内容下载豆包搜索大聪明战队。</div>
+                        </div>
+                        <div class="search-result-item" data-target="leadership-members-section">
+                            <div class="result-title">纪律委员会</div>
+                            <div class="result-desc">王某某担任纪律委员会委员长，负责队伍纪律管理。</div>
+                        </div>
+                        <div class="search-result-item" data-target="leadership-members-section">
+                            <div class="result-title">支队队长</div>
+                            <div class="result-desc">于某某、杜某某担任支队队长。</div>
+                        </div>
+                        <div class="search-result-item" data-target="leadership-members-section">
+                            <div class="result-title">普通队员</div>
+                            <div class="result-desc">刘某某、黄某某、焦某某、王某、齐某某、谢某某、张某某、祁某某、焦某、蔡某某、陈某某、卜某某、刘某某等成员。</div>
+                        </div>
+                        <div class="search-result-item" data-target="leadership-members-section">
+                            <div class="result-title">刘某某</div>
+                            <div class="result-desc">担任大队长、书记职务。</div>
+                        </div>
+                        <div class="search-result-item" data-target="leadership-members-section">
+                            <div class="result-title">王某某</div>
+                            <div class="result-desc">担任纪律委员会委员长、支队副队长职务。</div>
+                        </div>
+                        <div class="search-result-item" data-target="leadership-members-section">
+                            <div class="result-title">于某某</div>
+                            <div class="result-desc">担任支队队长职务。</div>
+                        </div>
+                        <div class="search-result-item" data-target="leadership-members-section">
+                            <div class="result-title">杜某某</div>
+                            <div class="result-desc">担任支队队长职务。</div>
+                        </div>
+                        <div class="search-result-item" data-target="leadership-members-section">
+                            <div class="result-title">余某某</div>
+                            <div class="result-desc">担任支队副队长职务。</div>
+                        </div>
+                        <div class="search-result-item" data-target="leadership-members-section">
+                            <div class="result-title">黄某某</div>
+                            <div class="result-desc">普通队员。</div>
+                        </div>
+                        <div class="search-result-item" data-target="leadership-members-section">
+                            <div class="result-title">焦某某</div>
+                            <div class="result-desc">普通队员。</div>
+                        </div>
+                        <div class="search-result-item" data-target="leadership-members-section">
+                            <div class="result-title">王某</div>
+                            <div class="result-desc">普通队员。</div>
+                        </div>
+                        <div class="search-result-item" data-target="leadership-members-section">
+                            <div class="result-title">齐某某</div>
+                            <div class="result-desc">普通队员。</div>
+                        </div>
+                        <div class="search-result-item" data-target="leadership-members-section">
+                            <div class="result-title">谢某某</div>
+                            <div class="result-desc">普通队员。</div>
+                        </div>
+                        <div class="search-result-item" data-target="leadership-members-section">
+                            <div class="result-title">张某某</div>
+                            <div class="result-desc">普通队员。</div>
+                        </div>
+                        <div class="search-result-item" data-target="leadership-members-section">
+                            <div class="result-title">祁某某</div>
+                            <div class="result-desc">普通队员。</div>
+                        </div>
+                        <div class="search-result-item" data-target="leadership-members-section">
+                            <div class="result-title">焦某</div>
+                            <div class="result-desc">普通队员。</div>
+                        </div>
+                        <div class="search-result-item" data-target="leadership-members-section">
+                            <div class="result-title">蔡某某</div>
+                            <div class="result-desc">普通队员。</div>
+                        </div>
+                        <div class="search-result-item" data-target="leadership-members-section">
+                            <div class="result-title">陈某某</div>
+                            <div class="result-desc">普通队员。</div>
+                        </div>
+                        <div class="search-result-item" data-target="leadership-members-section">
+                            <div class="result-title">卜某某</div>
+                            <div class="result-desc">普通队员。</div>
+                        </div>
+                        <div class="search-result-item" data-target="time-section">
+                            <div class="result-title">2022年</div>
+                            <div class="result-desc">大聪明大队成立时间。</div>
+                        </div>
+                        <div class="search-result-item" data-target="time-section">
+                            <div class="result-title">2024年12月24日</div>
+                            <div class="result-desc">大聪明大队正式成立时间。</div>
+                        </div>
+                        <div class="no-results" id="no-results" style="display: none;">
+                            <div class="no-results-icon">🔍</div>
+                            <div class="no-results-text">无结果</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 导航链接 -->
+                <nav class="nav">
+                    <a href="#" class="nav-link" id="login-btn">登录</a>
+                    <a href="index.html" class="nav-link">首页</a>
+                    <a href="contact.html" class="nav-link active">联系我们</a>
+                    <a href="#" class="nav-link" id="useful-websites-btn">有用的网站</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+    <!-- 主要内容区域 -->
+    <main class="main-content">
+        <!-- 联系我们 -->
+        <div class="contact-section">
+            <h2 class="section-title">联系我们</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item clickable" onclick="window.open('https://www.doubao.com', '_blank')">
+                        <div class="contact-icon">📱</div>
+                        <div class="contact-details">
+                            <h3 class="contact-title">豆包</h3>
+                            <p class="contact-value">想了解更多内容下载豆包搜索大聪明战队</p>
+                        </div>
+                    </div>
+                    <div class="contact-item clickable" onclick="window.open('https://mail.qq.com', '_blank')">
+                        <div class="contact-icon">📧</div>
+                        <div class="contact-details">
+                            <h3 class="contact-title">大队长邮箱</h3>
+                            <p class="contact-value">1364697858@qq.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item clickable" onclick="window.open('https://www.amap.com/search?query=茅房', '_blank')">
+                        <div class="contact-icon">📍</div>
+                        <div class="contact-details">
+                            <h3 class="contact-title">地址</h3>
+                            <p class="contact-value">前大聪明大队基地——大队长家茅房</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3 class="form-title">给我们留言</h3>
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="name">昵称</label>
+                            <input type="text" id="name" name="name" placeholder="请输入您的姓名" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">邮箱</label>
+                            <input type="email" id="email" name="email" placeholder="请输入您的邮箱" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">留言内容</label>
+                            <textarea id="message" name="message" rows="5" placeholder="请输入您的留言内容" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">提交留言</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <!-- 页脚 -->
+    <div class="team-footer-container">
+        <div class="team-footer">
+            想了解更多内容下载<a href="https://www.doubao.com" target="_blank">豆包</a>搜索大聪明战队就可以搜到关于大聪明战队大队长做的好多智能体，如：大聪明战队、大聪战队考试1、大聪明战队考试2、大聪明战队考试3、大聪明战队公告1、大聪明战队公告2、大聪明战队知识点汇总……
+        </div>
+        <div class="team-footer-announcement">
+            大聪明战队宣
+        </div>
+        <div class="copyright" id="copyright">
+            © 2026年2月20日 大聪明大队 版权所有
+        </div>
+    </div>
+    
+    <script>
+        function updateCopyright() {
+            const now = new Date();
+            const year = now.getFullYear();
+            const month = now.getMonth() + 1;
+            const day = now.getDate();
+            document.getElementById('copyright').textContent = `© ${year}年${month}月${day}日 大聪明大队 版权所有`;
+        }
+        
+        const searchInput = document.getElementById('search-input');
+        const searchBtn = document.getElementById('search-btn');
+        const searchResults = document.getElementById('search-results');
+        const searchResultsContent = document.getElementById('search-results-content');
+        const searchResultItems = searchResultsContent.querySelectorAll('.search-result-item');
+        const noResults = document.getElementById('no-results');
+        
+        function performSearch() {
+            const query = searchInput.value.toLowerCase().trim();
+            
+            if (query === '') {
+                searchResults.style.display = 'none';
+                return;
+            }
+            
+            let hasResults = false;
+            searchResultItems.forEach(item => {
+                const title = item.querySelector('.result-title').textContent.toLowerCase();
+                const desc = item.querySelector('.result-desc').textContent.toLowerCase();
+                const target = item.getAttribute('data-target');
+                
+                if (title.includes(query) || desc.includes(query)) {
+                    item.style.display = 'block';
+                    hasResults = true;
+                } else {
+                    item.style.display = 'none';
+                }
+                
+                item.addEventListener('click', function() {
+                    if (target) {
+                        window.location.href = 'index.html#' + target;
+                    }
+                });
+            });
+            
+            searchResults.style.display = 'block';
+            
+            if (hasResults) {
+                noResults.style.display = 'none';
+            } else {
+                noResults.style.display = 'flex';
+            }
+        }
+        
+        searchInput.addEventListener('focus', function() {
+            if (searchInput.value.trim() !== '') {
+                performSearch();
+            } else {
+                searchResults.style.display = 'none';
+            }
+        });
+        
+        searchInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                performSearch();
+            }
+        });
+        
+        searchInput.addEventListener('input', function() {
+            performSearch();
+        });
+        
+        searchBtn.addEventListener('click', function() {
+            performSearch();
+        });
+        
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            
+            const subject = encodeURIComponent('来自大聪明大队网站的留言 - ' + name);
+            const body = encodeURIComponent(
+                '姓名：' + name + '\n' +
+                '邮箱：' + email + '\n' +
+                '留言内容：\n' + message
+            );
+            
+            window.location.href = 'mailto:1364697858@qq.com?subject=' + subject + '&body=' + body;
+            
+            alert('邮件客户端已打开，请发送邮件。感谢您的反馈！');
+            this.reset();
+        });
+        
+        const loginBtn = document.getElementById('login-btn');
+        const loginModal = document.getElementById('login-modal');
+        const closeModalBtn = document.getElementById('close-modal');
+        const loginForm = document.getElementById('login-form');
+        
+        loginBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            loginModal.style.display = 'flex';
+        });
+        
+        closeModalBtn.addEventListener('click', function() {
+            loginModal.style.display = 'none';
+        });
+        
+        loginModal.addEventListener('click', function(e) {
+            if (e.target === loginModal) {
+                loginModal.style.display = 'none';
+            }
+        });
+        
+        loginForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            alert('登录成功！欢迎回来，' + username);
+            loginModal.style.display = 'none';
+            this.reset();
+        });
+        
+        updateCopyright();
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            const loginBtn = document.getElementById('login-btn');
+            const loginModal = document.getElementById('login-modal');
+            const closeModalBtn = document.getElementById('close-modal');
+            const loginForm = document.getElementById('login-form');
+            
+            if (loginBtn && loginModal && closeModalBtn && loginForm) {
+                let isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+                let currentUsername = localStorage.getItem('currentUsername') || '';
+                
+                const userPasswords = {
+                    '刘佳润': '202201',
+                    '刘笑岩': '202206',
+                    '于子硕': '202202',
+                    '杜姜豪': '255254',
+                    '王竑正': '202204',
+                    '余东泽': '20241',
+                    '王竑达': '202203',
+                    '黄俊麟': '255251',
+                    '刘嘉哲': '202205',
+                    '刘凯俊': '20242',
+                    '焦子航': '255253',
+                    '王飞': '251223',
+                    '齐浩涵': '251220',
+                    '谢浩轩': '251213',
+                    '张世博': '251229',
+                    '祁博瑞': '25124',
+                    '焦博': '259192',
+                    '蔡俊熙': '259191',
+                    '陈嘉轩': '255255',
+                    '卜俊宇': '255251'
+                };
+                
+                const errorMessage = document.getElementById('error-message');
+                const usernameBackground = document.getElementById('username-background');
+                const usernameText = document.getElementById('username-text');
+                
+                function updateLoginState() {
+                    if (isLoggedIn && currentUsername) {
+                        loginBtn.textContent = '退出登录';
+                        usernameText.textContent = currentUsername;
+                        usernameBackground.style.display = 'flex';
+                        
+                        const welcomeMessage = document.getElementById('welcome-message');
+                        if (welcomeMessage) {
+                            welcomeMessage.textContent = '你好' + currentUsername;
+                        }
+                        
+                        const sideDecorations = document.querySelectorAll('.side-decoration');
+                        sideDecorations.forEach(decoration => {
+                            decoration.classList.add('show');
+                        });
+                    } else {
+                        loginBtn.textContent = '登录';
+                        usernameBackground.style.display = 'none';
+                        
+                        const welcomeMessage = document.getElementById('welcome-message');
+                        if (welcomeMessage) {
+                            welcomeMessage.textContent = '';
+                        }
+                        
+                        const sideDecorations = document.querySelectorAll('.side-decoration');
+                        sideDecorations.forEach(decoration => {
+                            decoration.classList.remove('show');
+                        });
+                    }
+                }
+                
+                function showLoginModal() {
+                    loginModal.style.display = 'flex';
+                }
+                
+                function handleLogout() {
+                    if (confirm('确定要退出登录吗？')) {
+                        alert('已退出登录');
+                        isLoggedIn = false;
+                        currentUsername = '';
+                        localStorage.setItem('isLoggedIn', 'false');
+                        localStorage.setItem('currentUsername', '');
+                        
+                        const welcomeMessage = document.getElementById('welcome-message');
+                        if (welcomeMessage) {
+                            welcomeMessage.textContent = '';
+                        }
+                        
+                        const sideDecorations = document.querySelectorAll('.side-decoration');
+                        sideDecorations.forEach(decoration => {
+                            decoration.classList.remove('show');
+                        });
+                        
+                        updateLoginState();
+                    }
+                }
+                
+                loginBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    if (isLoggedIn) {
+                        handleLogout();
+                    } else {
+                        showLoginModal();
+                    }
+                });
+                
+                const usefulWebsitesBtn = document.getElementById('useful-websites-btn');
+                if (usefulWebsitesBtn) {
+                    usefulWebsitesBtn.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        if (!isLoggedIn) {
+                            alert('请登录后再试');
+                            return;
+                        }
+                        window.location.href = 'useful-websites.html';
+                    });
+                }
+                
+                closeModalBtn.addEventListener('click', function() {
+                    loginModal.style.display = 'none';
+                });
+                
+                loginModal.addEventListener('click', function(e) {
+                    if (e.target === loginModal) {
+                        loginModal.style.display = 'none';
+                    }
+                });
+                
+                loginForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const username = document.getElementById('username').value;
+                    const password = document.getElementById('password').value;
+                    
+                    if (!username) {
+                        alert('请选择用户名');
+                        return;
+                    }
+                    
+                    if (!password) {
+                        alert('请输入密码');
+                        return;
+                    }
+                    
+                    if (userPasswords[username] === password) {
+                        loginModal.style.display = 'none';
+                        this.reset();
+                        
+                        isLoggedIn = true;
+                        currentUsername = username;
+                        localStorage.setItem('isLoggedIn', 'true');
+                        localStorage.setItem('currentUsername', username);
+                        
+                        updateLoginState();
+                        
+                        const sideDecorations = document.querySelectorAll('.side-decoration');
+                        sideDecorations.forEach(decoration => {
+                            decoration.classList.add('show');
+                        });
+                    } else {
+                        errorMessage.classList.add('show');
+                        document.getElementById('password').value = '';
+                        document.getElementById('password').focus();
+                    }
+                });
+                
+                errorMessage.addEventListener('click', function() {
+                    errorMessage.classList.remove('show');
+                });
+                
+                updateLoginState();
+            }
+        });
+    </script>
+    
+    <!-- 登录弹窗 -->
+    <div class="modal" id="login-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">登录</h2>
+                <button class="close-btn" id="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="login-form">
+                    <div class="form-group">
+                        <label for="username">用户名</label>
+                        <select id="username" name="username" required>
+                            <option value="">请选择用户名</option>
+                            <option value="刘佳润">刘佳润</option>
+                            <option value="刘笑岩">刘笑岩</option>
+                            <option value="于子硕">于子硕</option>
+                            <option value="杜姜豪">杜姜豪</option>
+                            <option value="王竑正">王竑正</option>
+                            <option value="余东泽">余东泽</option>
+                            <option value="王竑达">王竑达</option>
+                            <option value="黄俊麟">黄俊麟</option>
+                            <option value="刘嘉哲">刘嘉哲</option>
+                            <option value="刘凯俊">刘凯俊</option>
+                            <option value="焦子航">焦子航</option>
+                            <option value="王飞">王飞</option>
+                            <option value="齐浩涵">齐浩涵</option>
+                            <option value="谢浩轩">谢浩轩</option>
+                            <option value="张世博">张世博</option>
+                            <option value="祁博瑞">祁博瑞</option>
+                            <option value="焦博">焦博</option>
+                            <option value="蔡俊熙">蔡俊熙</option>
+                            <option value="陈嘉轩">陈嘉轩</option>
+                            <option value="卜俊宇">卜俊宇</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">密码</label>
+                        <input type="password" id="password" name="password" placeholder="请输入密码" required>
+                    </div>
+                    <button type="submit" class="submit-btn">登录</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 错误提示框 -->
+    <div class="error-message" id="error-message">
+        <div class="error-icon">×</div>
+        <div class="error-text">密码错误，请重新输入</div>
+    </div>
+    
+    <!-- 登录用户名背景 -->
+    <div class="username-background" id="username-background">
+        <div class="username-text" id="username-text"></div>
+    </div>
+    
+    <!-- 网页两侧装饰 -->
+    <div class="side-decoration left-decoration">
+        <div class="side-text">天涯若比邻</div>
+    </div>
+    <div class="side-decoration right-decoration">
+        <div class="side-text">海内存知己</div>
+    </div>
+</body>
+</html>

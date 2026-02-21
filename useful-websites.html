@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>有用的网站 - 大聪明大队（粑粑大队）</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 头部导航 -->
+    <header class="header">
+        <div class="header-content">
+            <!-- 左侧标志和名称 -->
+            <div class="logo-section">
+                <img src="队徽.jpg" alt="队徽" class="logo">
+                <div class="gov-info">
+                    <h1 class="gov-name">大聪明大队（粑粑大队）</h1>
+                    <a href="https://1364697858.github.io/dacongming/" class="gov-link">1364697858.github.io/dacongming</a>
+                    <div class="welcome-message" id="welcome-message"></div>
+                </div>
+            </div>
+            
+            <!-- 右侧搜索和导航 -->
+            <div class="right-section">
+                <!-- 搜索框 -->
+                <div class="search-box">
+                    <input type="text" placeholder="搜索网站" class="search-input" id="website-search-input">
+                    <button class="search-btn" id="website-search-btn">🔍</button>
+                </div>
+                
+                <!-- 导航链接 -->
+                <nav class="nav">
+                    <a href="#" class="nav-link" id="login-btn">登录</a>
+                    <a href="index.html" class="nav-link">首页</a>
+                    <a href="contact.html" class="nav-link">联系我们</a>
+                    <a href="useful-websites.html" class="nav-link active">有用的网站</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+    <!-- 主要内容区域 -->
+    <main class="main-content">
+        <!-- 网站搜索和筛选 -->
+        <div class="websites-header">
+            <h2 class="section-title">有用的网站</h2>
+            <div class="websites-controls">
+                <button class="control-btn" id="show-all-btn">全部</button>
+                <button class="control-btn" id="show-favorites-btn">我的收藏</button>
+            </div>
+        </div>
+        
+        <!-- 网站列表 -->
+        <div class="websites-container" id="websites-container">
+            <div class="website-card" data-id="1" data-name="百度" data-category="搜索">
+                <div class="website-header">
+                    <h3 class="website-name">百度</h3>
+                    <button class="favorite-btn" data-id="1">☆</button>
+                </div>
+                <p class="website-desc">全球最大的中文搜索引擎</p>
+                <a href="https://www.baidu.com" target="_blank" class="website-link">https://www.baidu.com</a>
+            </div>
+            
+            <div class="website-card" data-id="2" data-name="豆包" data-category="AI">
+                <div class="website-header">
+                    <h3 class="website-name">豆包</h3>
+                    <button class="favorite-btn" data-id="2">☆</button>
+                </div>
+                <p class="website-desc">字节跳动推出的AI助手</p>
+                <a href="https://www.doubao.com" target="_blank" class="website-link">https://www.doubao.com</a>
+            </div>
+            
+            <div class="website-card" data-id="3" data-name="GitHub" data-category="开发">
+                <div class="website-header">
+                    <h3 class="website-name">GitHub</h3>
+                    <button class="favorite-btn" data-id="3">☆</button>
+                </div>
+                <p class="website-desc">全球最大的代码托管平台</p>
+                <a href="https://github.com" target="_blank" class="website-link">https://github.com</a>
+            </div>
+            
+            <div class="website-card" data-id="4" data-name="知乎" data-category="问答">
+                <div class="website-header">
+                    <h3 class="website-name">知乎</h3>
+                    <button class="favorite-btn" data-id="4">☆</button>
+                </div>
+                <p class="website-desc">中文互联网高质量的问答社区</p>
+                <a href="https://www.zhihu.com" target="_blank" class="website-link">https://www.zhihu.com</a>
+            </div>
+            
+            <div class="website-card" data-id="5" data-name="B站" data-category="视频">
+                <div class="website-header">
+                    <h3 class="website-name">B站</h3>
+                    <button class="favorite-btn" data-id="5">☆</button>
+                </div>
+                <p class="website-desc">中国年轻世代高度聚集的文化社区</p>
+                <a href="https://www.bilibili.com" target="_blank" class="website-link">https://www.bilibili.com</a>
+            </div>
+            
+            <div class="website-card" data-id="6" data-name="网易云音乐" data-category="音乐">
+                <div class="website-header">
+                    <h3 class="website-name">网易云音乐</h3>
+                    <button class="favorite-btn" data-id="6">☆</button>
+                </div>
+                <p class="website-desc">专注于发现与分享的音乐产品</p>
+                <a href="https://music.163.com" target="_blank" class="website-link">https://music.163.com</a>
+            </div>
+            
+            <div class="website-card" data-id="7" data-name="腾讯视频" data-category="视频">
+                <div class="website-header">
+                    <h3 class="website-name">腾讯视频</h3>
+                    <button class="favorite-btn" data-id="7">☆</button>
+                </div>
+                <p class="website-desc">中国领先的在线视频媒体平台</p>
+                <a href="https://v.qq.com" target="_blank" class="website-link">https://v.qq.com</a>
+            </div>
+            
+            <div class="website-card" data-id="8" data-name="CSDN" data-category="开发">
+                <div class="website-header">
+                    <h3 class="website-name">CSDN</h3>
+                    <button class="favorite-btn" data-id="8">☆</button>
+                </div>
+                <p class="website-desc">中国专业的IT社区和服务平台</p>
+                <a href="https://www.csdn.net" target="_blank" class="website-link">https://www.csdn.net</a>
+            </div>
+            
+            <div class="website-card" data-id="9" data-name="微博" data-category="社交">
+                <div class="website-header">
+                    <h3 class="website-name">微博</h3>
+                    <button class="favorite-btn" data-id="9">☆</button>
+                </div>
+                <p class="website-desc">随时随地发现新鲜事</p>
+                <a href="https://weibo.com" target="_blank" class="website-link">https://weibo.com</a>
+            </div>
+            
+            <div class="website-card" data-id="10" data-name="高德地图" data-category="工具">
+                <div class="website-header">
+                    <h3 class="website-name">高德地图</h3>
+                    <button class="favorite-btn" data-id="10">☆</button>
+                </div>
+                <p class="website-desc">专业的数字地图内容、导航和位置服务解决方案</p>
+                <a href="https://www.amap.com" target="_blank" class="website-link">https://www.amap.com</a>
+            </div>
+        </div>
+        
+        <!-- 无结果提示 -->
+        <div class="no-results" id="no-results" style="display: none;">
+            <div class="no-results-icon">🔍</div>
+            <div class="no-results-text">无结果</div>
+        </div>
+    </main>
+    
+    <!-- 页脚 -->
+    <footer class="team-footer-container">
+        <div class="team-footer">
+            <p>想了解更多内容下载<a href="https://www.doubao.com" target="_blank">豆包</a>搜索大聪明战队就可以搜到关于大聪明战队大队长做的好多智能体</p>
+            <p>大聪明战队宣</p>
+        </div>
+        <div class="team-footer-announcement">
+            <p>权利所有</p>
+        </div>
+        <div class="copyright">
+            <p id="current-date"></p>
+        </div>
+    </footer>
+    
+    <!-- 登录用户名背景 -->
+    <div class="username-background" id="username-background">
+        <div class="username-text" id="username-text"></div>
+    </div>
+    
+    <!-- 网页两侧装饰 -->
+    <div class="side-decoration left-decoration">
+        <div class="side-text">天涯若比邻</div>
+    </div>
+    <div class="side-decoration right-decoration">
+        <div class="side-text">海内存知己</div>
+    </div>
+    
+    <!-- 登录弹窗 -->
+    <div class="modal" id="login-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">登录</h2>
+                <button class="close-btn" id="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="login-form">
+                    <div class="form-group">
+                        <label for="username">用户名：</label>
+                        <select id="username" name="username" required>
+                            <option value="">请选择用户名</option>
+                            <option value="刘佳润">刘佳润</option>
+                            <option value="刘笑岩">刘笑岩</option>
+                            <option value="于子硕">于子硕</option>
+                            <option value="杜姜豪">杜姜豪</option>
+                            <option value="王竑正">王竑正</option>
+                            <option value="余东泽">余东泽</option>
+                            <option value="王竑达">王竑达</option>
+                            <option value="黄俊麟">黄俊麟</option>
+                            <option value="刘嘉哲">刘嘉哲</option>
+                            <option value="刘凯俊">刘凯俊</option>
+                            <option value="焦子航">焦子航</option>
+                            <option value="王飞">王飞</option>
+                            <option value="齐浩涵">齐浩涵</option>
+                            <option value="谢浩轩">谢浩轩</option>
+                            <option value="张世博">张世博</option>
+                            <option value="祁博瑞">祁博瑞</option>
+                            <option value="焦博">焦博</option>
+                            <option value="蔡俊熙">蔡俊熙</option>
+                            <option value="陈嘉轩">陈嘉轩</option>
+                            <option value="卜俊宇">卜俊宇</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">密码：</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <button type="submit" class="submit-btn">登录</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 错误消息 -->
+    <div class="error-message" id="error-message">
+        <div class="error-icon">×</div>
+        <div class="error-text">密码错误，禁止登录</div>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const loginBtn = document.getElementById('login-btn');
+            const loginModal = document.getElementById('login-modal');
+            const closeModalBtn = document.getElementById('close-modal');
+            const loginForm = document.getElementById('login-form');
+            const usernameBackground = document.getElementById('username-background');
+            const usernameText = document.getElementById('username-text');
+            const welcomeMessage = document.getElementById('welcome-message');
+            const websiteSearchInput = document.getElementById('website-search-input');
+            const websiteSearchBtn = document.getElementById('website-search-btn');
+            const websitesContainer = document.getElementById('websites-container');
+            const noResults = document.getElementById('no-results');
+            const showAllBtn = document.getElementById('show-all-btn');
+            const showFavoritesBtn = document.getElementById('show-favorites-btn');
+            
+            let isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+            let currentUsername = localStorage.getItem('currentUsername') || '';
+            
+            const userPasswords = {
+                '刘佳润': '202201',
+                '刘笑岩': '202206',
+                '于子硕': '202202',
+                '杜姜豪': '255254',
+                '王竑正': '202204',
+                '余东泽': '20241',
+                '王竑达': '202203',
+                '黄俊麟': '255251',
+                '刘嘉哲': '202205',
+                '刘凯俊': '20242',
+                '焦子航': '255253',
+                '王飞': '251223',
+                '齐浩涵': '251220',
+                '谢浩轩': '251213',
+                '张世博': '251229',
+                '祁博瑞': '25124',
+                '焦博': '259192',
+                '蔡俊熙': '259191',
+                '陈嘉轩': '255255',
+                '卜俊宇': '255251'
+            };
+            
+            const errorMessage = document.getElementById('error-message');
+            
+            function updateLoginState() {
+                if (isLoggedIn && currentUsername) {
+                    loginBtn.textContent = '退出登录';
+                    usernameText.textContent = currentUsername;
+                    usernameBackground.style.display = 'flex';
+                    
+                    if (welcomeMessage) {
+                        welcomeMessage.textContent = '你好' + currentUsername;
+                    }
+                    
+                    const sideDecorations = document.querySelectorAll('.side-decoration');
+                    sideDecorations.forEach(decoration => {
+                        decoration.classList.add('show');
+                    });
+                    
+                    loadFavorites();
+                } else {
+                    loginBtn.textContent = '登录';
+                    usernameBackground.style.display = 'none';
+                    
+                    if (welcomeMessage) {
+                        welcomeMessage.textContent = '';
+                    }
+                    
+                    const sideDecorations = document.querySelectorAll('.side-decoration');
+                    sideDecorations.forEach(decoration => {
+                        decoration.classList.remove('show');
+                    });
+                }
+            }
+            
+            function showLoginModal() {
+                loginModal.style.display = 'flex';
+            }
+            
+            function handleLogout() {
+                if (confirm('确定要退出登录吗？')) {
+                    alert('已退出登录');
+                    isLoggedIn = false;
+                    currentUsername = '';
+                    localStorage.setItem('isLoggedIn', 'false');
+                    localStorage.setItem('currentUsername', '');
+                    updateLoginState();
+                }
+            }
+            
+            function getFavorites() {
+                const favorites = localStorage.getItem('favorites');
+                return favorites ? JSON.parse(favorites) : [];
+            }
+            
+            function saveFavorites(favorites) {
+                localStorage.setItem('favorites', JSON.stringify(favorites));
+            }
+            
+            function loadFavorites() {
+                const favorites = getFavorites();
+                const favoriteBtns = document.querySelectorAll('.favorite-btn');
+                
+                favoriteBtns.forEach(btn => {
+                    const websiteId = btn.getAttribute('data-id');
+                    if (favorites.includes(websiteId)) {
+                        btn.textContent = '★';
+                        btn.classList.add('active');
+                    } else {
+                        btn.textContent = '☆';
+                        btn.classList.remove('active');
+                    }
+                });
+            }
+            
+            function toggleFavorite(websiteId) {
+                if (!isLoggedIn) {
+                    alert('请先登录');
+                    return;
+                }
+                
+                let favorites = getFavorites();
+                const index = favorites.indexOf(websiteId);
+                
+                if (index > -1) {
+                    favorites.splice(index, 1);
+                } else {
+                    favorites.push(websiteId);
+                }
+                
+                saveFavorites(favorites);
+                loadFavorites();
+            }
+            
+            function filterWebsites(searchTerm = '', showFavoritesOnly = false) {
+                const websiteCards = document.querySelectorAll('.website-card');
+                let visibleCount = 0;
+                
+                websiteCards.forEach(card => {
+                    const name = card.getAttribute('data-name').toLowerCase();
+                    const category = card.getAttribute('data-category').toLowerCase();
+                    const websiteId = card.getAttribute('data-id');
+                    const favorites = getFavorites();
+                    
+                    const matchesSearch = name.includes(searchTerm) || category.includes(searchTerm);
+                    const matchesFavorite = !showFavoritesOnly || favorites.includes(websiteId);
+                    
+                    if (matchesSearch && matchesFavorite) {
+                        card.style.display = 'block';
+                        visibleCount++;
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+                
+                noResults.style.display = visibleCount === 0 ? 'flex' : 'none';
+            }
+            
+            function updateCurrentDate() {
+                const now = new Date();
+                const year = now.getFullYear();
+                const month = now.getMonth() + 1;
+                const day = now.getDate();
+                const currentDate = document.getElementById('current-date');
+                if (currentDate) {
+                    currentDate.textContent = `${year}年${month}月${day}日`;
+                }
+            }
+            
+            updateLoginState();
+            updateCurrentDate();
+            
+            loginBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                if (isLoggedIn) {
+                    handleLogout();
+                } else {
+                    showLoginModal();
+                }
+            });
+            
+            closeModalBtn.addEventListener('click', function() {
+                loginModal.style.display = 'none';
+            });
+            
+            loginModal.addEventListener('click', function(e) {
+                if (e.target === loginModal) {
+                    loginModal.style.display = 'none';
+                }
+            });
+            
+            loginForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const username = document.getElementById('username').value;
+                const password = document.getElementById('password').value;
+                
+                if (!username) {
+                    alert('请选择用户名');
+                    return;
+                }
+                
+                if (!password) {
+                    alert('请输入密码');
+                    return;
+                }
+                
+                if (userPasswords[username] === password) {
+                    loginModal.style.display = 'none';
+                    this.reset();
+                    
+                    isLoggedIn = true;
+                    currentUsername = username;
+                    localStorage.setItem('isLoggedIn', 'true');
+                    localStorage.setItem('currentUsername', username);
+                    loginBtn.textContent = '退出登录';
+                    
+                    usernameText.textContent = username;
+                    usernameBackground.style.display = 'flex';
+                    
+                    if (welcomeMessage) {
+                        welcomeMessage.textContent = '你好' + username;
+                    }
+                    
+                    const sideDecorations = document.querySelectorAll('.side-decoration');
+                    sideDecorations.forEach(decoration => {
+                        decoration.classList.add('show');
+                    });
+                    
+                    loadFavorites();
+                } else {
+                    errorMessage.classList.add('show');
+                    document.getElementById('password').value = '';
+                    document.getElementById('password').focus();
+                }
+            });
+            
+            errorMessage.addEventListener('click', function() {
+                errorMessage.classList.remove('show');
+            });
+            
+            websiteSearchInput.addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase();
+                const showFavoritesOnly = showFavoritesBtn.classList.contains('active');
+                filterWebsites(searchTerm, showFavoritesOnly);
+            });
+            
+            websiteSearchBtn.addEventListener('click', function() {
+                const searchTerm = websiteSearchInput.value.toLowerCase();
+                const showFavoritesOnly = showFavoritesBtn.classList.contains('active');
+                filterWebsites(searchTerm, showFavoritesOnly);
+            });
+            
+            showAllBtn.addEventListener('click', function() {
+                showAllBtn.classList.add('active');
+                showFavoritesBtn.classList.remove('active');
+                const searchTerm = websiteSearchInput.value.toLowerCase();
+                filterWebsites(searchTerm, false);
+            });
+            
+            showFavoritesBtn.addEventListener('click', function() {
+                showFavoritesBtn.classList.add('active');
+                showAllBtn.classList.remove('active');
+                const searchTerm = websiteSearchInput.value.toLowerCase();
+                filterWebsites(searchTerm, true);
+            });
+            
+            document.querySelectorAll('.favorite-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const websiteId = this.getAttribute('data-id');
+                    toggleFavorite(websiteId);
+                });
+            });
+            
+            setInterval(updateCurrentDate, 1000);
+        });
+    </script>
+</body>
+</html>
