@@ -380,6 +380,7 @@
                 let currentUsername = localStorage.getItem('currentUsername') || '';
                 
                 const userPasswords = {
+                    '真心话': '0015',
                     '刘佳润': '202201',
                     '刘笑岩': '202206',
                     '于子硕': '202202',
@@ -406,6 +407,40 @@
                 const usernameBackground = document.getElementById('username-background');
                 const usernameText = document.getElementById('username-text');
                 
+                function showWelcomeAnimation() {
+                    const welcomeAnimation = document.getElementById('welcome-animation');
+                    const welcomeText = document.getElementById('welcome-text');
+                    
+                    welcomeAnimation.style.display = 'flex';
+                    
+                    setTimeout(() => {
+                        welcomeAnimation.classList.add('show');
+                    }, 100);
+                    
+                    setTimeout(() => {
+                        welcomeAnimation.classList.add('fade-out');
+                    }, 3000);
+                    
+                    setTimeout(() => {
+                        welcomeAnimation.style.display = 'none';
+                        welcomeAnimation.classList.remove('show', 'fade-out');
+                    }, 5000);
+                    
+                    const sideDecorations = document.querySelectorAll('.side-decoration');
+                    sideDecorations.forEach(decoration => {
+                        decoration.classList.add('zhenxinhua-style');
+                    });
+                    
+                    if ('speechSynthesis' in window) {
+                        const utterance = new SpeechSynthesisUtterance('欢迎你真心话，祝你天天开心，万事如意，心想事成，前程似锦！');
+                        utterance.lang = 'zh-CN';
+                        utterance.rate = 0.5;
+                        utterance.pitch = 1;
+                        utterance.volume = 1;
+                        window.speechSynthesis.speak(utterance);
+                    }
+                }
+                
                 function updateLoginState() {
                     if (isLoggedIn && currentUsername) {
                         loginBtn.textContent = '退出登录';
@@ -414,7 +449,11 @@
                         
                         const welcomeMessage = document.getElementById('welcome-message');
                         if (welcomeMessage) {
-                            welcomeMessage.textContent = '你好' + currentUsername;
+                            if (currentUsername === '真心话') {
+                                welcomeMessage.textContent = '你好' + currentUsername + '（书记抖音粉丝）';
+                            } else {
+                                welcomeMessage.textContent = '你好' + currentUsername;
+                            }
                         }
                         
                         const sideDecorations = document.querySelectorAll('.side-decoration');
@@ -518,6 +557,10 @@
                         localStorage.setItem('isLoggedIn', 'true');
                         localStorage.setItem('currentUsername', username);
                         
+                        if (username === '真心话') {
+                            showWelcomeAnimation();
+                        }
+                        
                         updateLoginState();
                         
                         const sideDecorations = document.querySelectorAll('.side-decoration');
@@ -553,6 +596,7 @@
                         <label for="username">用户名</label>
                         <select id="username" name="username" required>
                             <option value="">请选择用户名</option>
+                            <option value="真心话">真心话</option>
                             <option value="刘佳润">刘佳润</option>
                             <option value="刘笑岩">刘笑岩</option>
                             <option value="于子硕">于子硕</option>
@@ -602,6 +646,11 @@
     </div>
     <div class="side-decoration right-decoration">
         <div class="side-text">海内存知己</div>
+    </div>
+    
+    <!-- 真心话登录欢迎动画 -->
+    <div class="welcome-animation" id="welcome-animation">
+        <div class="welcome-text" id="welcome-text">欢迎你——真心话</div>
     </div>
 </body>
 </html>

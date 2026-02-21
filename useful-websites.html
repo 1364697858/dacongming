@@ -22,12 +22,6 @@
             
             <!-- 右侧搜索和导航 -->
             <div class="right-section">
-                <!-- 搜索框 -->
-                <div class="search-box">
-                    <input type="text" placeholder="搜索网站" class="search-input" id="website-search-input">
-                    <button class="search-btn" id="website-search-btn">🔍</button>
-                </div>
-                
                 <!-- 导航链接 -->
                 <nav class="nav">
                     <a href="#" class="nav-link" id="login-btn">登录</a>
@@ -45,6 +39,10 @@
         <div class="websites-header">
             <h2 class="section-title">有用的网站</h2>
             <div class="websites-controls">
+                <div class="search-box">
+                    <input type="text" placeholder="搜索网站" class="search-input" id="website-search-input">
+                    <button class="search-btn" id="website-search-btn">🔍</button>
+                </div>
                 <button class="control-btn" id="show-all-btn">全部</button>
                 <button class="control-btn" id="show-favorites-btn">我的收藏</button>
             </div>
@@ -52,95 +50,6 @@
         
         <!-- 网站列表 -->
         <div class="websites-container" id="websites-container">
-            <div class="website-card" data-id="1" data-name="百度" data-category="搜索">
-                <div class="website-header">
-                    <h3 class="website-name">百度</h3>
-                    <button class="favorite-btn" data-id="1">☆</button>
-                </div>
-                <p class="website-desc">全球最大的中文搜索引擎</p>
-                <a href="https://www.baidu.com" target="_blank" class="website-link">https://www.baidu.com</a>
-            </div>
-            
-            <div class="website-card" data-id="2" data-name="豆包" data-category="AI">
-                <div class="website-header">
-                    <h3 class="website-name">豆包</h3>
-                    <button class="favorite-btn" data-id="2">☆</button>
-                </div>
-                <p class="website-desc">字节跳动推出的AI助手</p>
-                <a href="https://www.doubao.com" target="_blank" class="website-link">https://www.doubao.com</a>
-            </div>
-            
-            <div class="website-card" data-id="3" data-name="GitHub" data-category="开发">
-                <div class="website-header">
-                    <h3 class="website-name">GitHub</h3>
-                    <button class="favorite-btn" data-id="3">☆</button>
-                </div>
-                <p class="website-desc">全球最大的代码托管平台</p>
-                <a href="https://github.com" target="_blank" class="website-link">https://github.com</a>
-            </div>
-            
-            <div class="website-card" data-id="4" data-name="知乎" data-category="问答">
-                <div class="website-header">
-                    <h3 class="website-name">知乎</h3>
-                    <button class="favorite-btn" data-id="4">☆</button>
-                </div>
-                <p class="website-desc">中文互联网高质量的问答社区</p>
-                <a href="https://www.zhihu.com" target="_blank" class="website-link">https://www.zhihu.com</a>
-            </div>
-            
-            <div class="website-card" data-id="5" data-name="B站" data-category="视频">
-                <div class="website-header">
-                    <h3 class="website-name">B站</h3>
-                    <button class="favorite-btn" data-id="5">☆</button>
-                </div>
-                <p class="website-desc">中国年轻世代高度聚集的文化社区</p>
-                <a href="https://www.bilibili.com" target="_blank" class="website-link">https://www.bilibili.com</a>
-            </div>
-            
-            <div class="website-card" data-id="6" data-name="网易云音乐" data-category="音乐">
-                <div class="website-header">
-                    <h3 class="website-name">网易云音乐</h3>
-                    <button class="favorite-btn" data-id="6">☆</button>
-                </div>
-                <p class="website-desc">专注于发现与分享的音乐产品</p>
-                <a href="https://music.163.com" target="_blank" class="website-link">https://music.163.com</a>
-            </div>
-            
-            <div class="website-card" data-id="7" data-name="腾讯视频" data-category="视频">
-                <div class="website-header">
-                    <h3 class="website-name">腾讯视频</h3>
-                    <button class="favorite-btn" data-id="7">☆</button>
-                </div>
-                <p class="website-desc">中国领先的在线视频媒体平台</p>
-                <a href="https://v.qq.com" target="_blank" class="website-link">https://v.qq.com</a>
-            </div>
-            
-            <div class="website-card" data-id="8" data-name="CSDN" data-category="开发">
-                <div class="website-header">
-                    <h3 class="website-name">CSDN</h3>
-                    <button class="favorite-btn" data-id="8">☆</button>
-                </div>
-                <p class="website-desc">中国专业的IT社区和服务平台</p>
-                <a href="https://www.csdn.net" target="_blank" class="website-link">https://www.csdn.net</a>
-            </div>
-            
-            <div class="website-card" data-id="9" data-name="微博" data-category="社交">
-                <div class="website-header">
-                    <h3 class="website-name">微博</h3>
-                    <button class="favorite-btn" data-id="9">☆</button>
-                </div>
-                <p class="website-desc">随时随地发现新鲜事</p>
-                <a href="https://weibo.com" target="_blank" class="website-link">https://weibo.com</a>
-            </div>
-            
-            <div class="website-card" data-id="10" data-name="高德地图" data-category="工具">
-                <div class="website-header">
-                    <h3 class="website-name">高德地图</h3>
-                    <button class="favorite-btn" data-id="10">☆</button>
-                </div>
-                <p class="website-desc">专业的数字地图内容、导航和位置服务解决方案</p>
-                <a href="https://www.amap.com" target="_blank" class="website-link">https://www.amap.com</a>
-            </div>
         </div>
         
         <!-- 无结果提示 -->
@@ -190,6 +99,7 @@
                         <label for="username">用户名：</label>
                         <select id="username" name="username" required>
                             <option value="">请选择用户名</option>
+                            <option value="真心话">真心话</option>
                             <option value="刘佳润">刘佳润</option>
                             <option value="刘笑岩">刘笑岩</option>
                             <option value="于子硕">于子硕</option>
@@ -248,6 +158,7 @@
             let currentUsername = localStorage.getItem('currentUsername') || '';
             
             const userPasswords = {
+                '真心话': '0015',
                 '刘佳润': '202201',
                 '刘笑岩': '202206',
                 '于子硕': '202202',
@@ -272,6 +183,390 @@
             
             const errorMessage = document.getElementById('error-message');
             
+            const websites = [
+                { id: 1, name: '百度', category: '搜索', url: 'https://www.baidu.com', desc: '全球最大的中文搜索引擎' },
+                { id: 2, name: '豆包', category: 'AI', url: 'https://www.doubao.com', desc: '字节跳动推出的AI助手' },
+                { id: 3, name: 'GitHub', category: '开发', url: 'https://github.com', desc: '全球最大的代码托管平台' },
+                { id: 4, name: '知乎', category: '问答', url: 'https://www.zhihu.com', desc: '中文互联网高质量的问答社区' },
+                { id: 5, name: 'B站', category: '视频', url: 'https://www.bilibili.com', desc: '中国年轻世代高度聚集的文化社区' },
+                { id: 6, name: '网易云音乐', category: '音乐', url: 'https://music.163.com', desc: '专注于发现与分享的音乐产品' },
+                { id: 7, name: '腾讯视频', category: '视频', url: 'https://v.qq.com', desc: '中国领先的在线视频媒体平台' },
+                { id: 8, name: 'CSDN', category: '开发', url: 'https://www.csdn.net', desc: '中国专业的IT社区和服务平台' },
+                { id: 9, name: '微博', category: '社交', url: 'https://weibo.com', desc: '随时随地发现新鲜事' },
+                { id: 10, name: '高德地图', category: '工具', url: 'https://www.amap.com', desc: '专业的数字地图内容、导航和位置服务解决方案' },
+                { id: 11, name: '360软件管家', category: '软件下载', url: 'https://soft.360.cn', desc: '360官方软件下载平台' },
+                { id: 12, name: '腾讯软件中心', category: '软件下载', url: 'https://pc.qq.com', desc: '腾讯官方软件下载平台' },
+                { id: 13, name: '华军软件园', category: '软件下载', url: 'https://www.onlinedown.net', desc: '老牌软件下载网站' },
+                { id: 14, name: '天空软件站', category: '软件下载', url: 'https://www.skycn.com', desc: '专业的软件下载站点' },
+                { id: 15, name: '太平洋下载', category: '软件下载', url: 'https://dl.pconline.com.cn', desc: '专业的软件下载中心' },
+                { id: 16, name: 'Steam', category: '游戏下载', url: 'https://store.steampowered.com', desc: '全球最大的数字游戏发行平台' },
+                { id: 17, name: '腾讯游戏', category: '游戏下载', url: 'https://game.qq.com', desc: '腾讯官方游戏平台' },
+                { id: 18, name: '网易游戏', category: '游戏下载', url: 'https://game.163.com', desc: '网易官方游戏平台' },
+                { id: 19, name: '游侠网', category: '游戏下载', url: 'https://www.ali213.net', desc: '专业的单机游戏下载网站' },
+                { id: 20, name: '3DMGAME', category: '游戏下载', url: 'https://www.3dmgame.com', desc: '专业的游戏资讯和下载网站' },
+                { id: 21, name: 'QQ邮箱', category: '邮箱', url: 'https://mail.qq.com', desc: '腾讯推出的电子邮件服务' },
+                { id: 22, name: '163邮箱', category: '邮箱', url: 'https://mail.163.com', desc: '网易推出的电子邮件服务' },
+                { id: 23, name: 'Gmail', category: '邮箱', url: 'https://mail.google.com', desc: '谷歌推出的电子邮件服务' },
+                { id: 24, name: '新浪邮箱', category: '邮箱', url: 'https://mail.sina.com.cn', desc: '新浪推出的电子邮件服务' },
+                { id: 25, name: 'Outlook', category: '邮箱', url: 'https://outlook.live.com', desc: '微软推出的电子邮件服务' },
+                { id: 26, name: '4399小游戏', category: '网页小游戏', url: 'https://www.4399.com', desc: '专业的flash小游戏网站' },
+                { id: 27, name: '7k7k小游戏', category: '网页小游戏', url: 'https://www.7k7k.com', desc: '专业的在线小游戏网站' },
+                { id: 28, name: '3366小游戏', category: '网页小游戏', url: 'https://www.3366.com', desc: '腾讯旗下的小游戏网站' },
+                { id: 29, name: '迷你玩', category: '网页小游戏', url: 'https://www.mini1.cn', desc: '专业的网页游戏平台' },
+                { id: 30, name: '17173小游戏', category: '网页小游戏', url: 'https://game.17173.com', desc: '专业的游戏资讯和小游戏网站' },
+                { id: 31, name: '抖音', category: '有趣', url: 'https://www.douyin.com', desc: '短视频分享平台' },
+                { id: 32, name: '快手', category: '有趣', url: 'https://www.kuaishou.com', desc: '短视频分享平台' },
+                { id: 33, name: '小红书', category: '有趣', url: 'https://www.xiaohongshu.com', desc: '生活方式分享平台' },
+                { id: 34, name: '豆瓣', category: '有趣', url: 'https://www.douban.com', desc: '书籍、电影、音乐评论社区' },
+                { id: 35, name: '虎扑', category: '有趣', url: 'https://www.hupu.com', desc: '专业的体育社区' },
+                { id: 36, name: '淘宝', category: '购物', url: 'https://www.taobao.com', desc: '中国最大的网上购物平台' },
+                { id: 37, name: '京东', category: '购物', url: 'https://www.jd.com', desc: '专业的综合网上购物商城' },
+                { id: 38, name: '拼多多', category: '购物', url: 'https://www.pinduoduo.com', desc: '社交电商平台' },
+                { id: 39, name: '天猫', category: '购物', url: 'https://www.tmall.com', desc: '综合性B2C购物网站' },
+                { id: 40, name: '唯品会', category: '购物', url: 'https://www.vip.com', desc: '专门的品牌特卖网站' },
+                { id: 41, name: '爱奇艺', category: '视频', url: 'https://www.iqiyi.com', desc: '中国领先的在线视频媒体平台' },
+                { id: 42, name: '优酷', category: '视频', url: 'https://www.youku.com', desc: '中国领先的视频分享网站' },
+                { id: 43, name: '芒果TV', category: '视频', url: 'https://www.mgtv.com', desc: '湖南卫视官方视频平台' },
+                { id: 44, name: '搜狐视频', category: '视频', url: 'https://tv.sohu.com', desc: '综合性的视频网站' },
+                { id: 45, name: '西瓜视频', category: '视频', url: 'https://www.ixigua.com', desc: '字节跳动推出的短视频平台' },
+                { id: 46, name: 'QQ音乐', category: '音乐', url: 'https://y.qq.com', desc: '腾讯旗下的音乐平台' },
+                { id: 47, name: '酷狗音乐', category: '音乐', url: 'https://www.kugou.com', desc: '中国领先的数字音乐服务商' },
+                { id: 48, name: '酷我音乐', category: '音乐', url: 'https://www.kuwo.cn', desc: '专业的音乐播放和下载网站' },
+                { id: 49, name: '虾米音乐', category: '音乐', url: 'https://www.xiami.com', desc: '阿里旗下的音乐平台' },
+                { id: 50, name: '咪咕音乐', category: '音乐', url: 'https://music.migu.cn', desc: '中国移动旗下的音乐平台' },
+                { id: 51, name: '搜狗搜索', category: '搜索', url: 'https://www.sogou.com', desc: '搜狗推出的搜索引擎' },
+                { id: 52, name: '360搜索', category: '搜索', url: 'https://www.so.com', desc: '360推出的搜索引擎' },
+                { id: 53, name: '必应搜索', category: '搜索', url: 'https://cn.bing.com', desc: '微软推出的搜索引擎' },
+                { id: 54, name: '谷歌', category: '搜索', url: 'https://www.google.com', desc: '全球最大的搜索引擎' },
+                { id: 55, name: '今日头条', category: '新闻', url: 'https://www.toutiao.com', desc: '基于数据挖掘的推荐引擎产品' },
+                { id: 56, name: '腾讯新闻', category: '新闻', url: 'https://news.qq.com', desc: '腾讯旗下的新闻资讯平台' },
+                { id: 57, name: '新浪新闻', category: '新闻', url: 'https://news.sina.com.cn', desc: '新浪旗下的新闻资讯平台' },
+                { id: 58, name: '网易新闻', category: '新闻', url: 'https://news.163.com', desc: '网易旗下的新闻资讯平台' },
+                { id: 59, name: '凤凰网', category: '新闻', url: 'https://www.ifeng.com', desc: '综合性的新闻资讯网站' },
+                { id: 60, name: '掘金', category: '开发', url: 'https://juejin.cn', desc: '一个帮助开发者成长的社区' },
+                { id: 61, name: 'SegmentFault', category: '开发', url: 'https://segmentfault.com', desc: '中文开发者社区' },
+                { id: 62, name: '开源中国', category: '开发', url: 'https://www.oschina.net', desc: '目前国内最大的开源技术社区' },
+                { id: 63, name: 'V2EX', category: '开发', url: 'https://www.v2ex.com', desc: '创意工作者们的社区' },
+                { id: 64, name: '博客园', category: '开发', url: 'https://www.cnblogs.com', desc: '开发者的技术博客社区' },
+                { id: 65, name: '微信', category: '社交', url: 'https://weixin.qq.com', desc: '腾讯推出的即时通讯软件' },
+                { id: 66, name: 'QQ', category: '社交', url: 'https://im.qq.com', desc: '腾讯推出的即时通讯软件' },
+                { id: 67, name: '钉钉', category: '社交', url: 'https://www.dingtalk.com', desc: '阿里巴巴推出的企业级通讯软件' },
+                { id: 68, name: '陌陌', category: '社交', url: 'https://www.immomo.com', desc: '基于地理位置的移动社交应用' },
+                { id: 69, name: '探探', category: '社交', url: 'https://www.tantanapp.com', desc: '基于大数据的社交软件' },
+                { id: 70, name: '百度网盘', category: '工具', url: 'https://pan.baidu.com', desc: '百度推出的云存储服务' },
+                { id: 71, name: '阿里云盘', category: '工具', url: 'https://www.aliyundrive.com', desc: '阿里推出的云存储服务' },
+                { id: 72, name: '腾讯文档', category: '工具', url: 'https://docs.qq.com', desc: '腾讯推出的在线文档工具' },
+                { id: 73, name: '石墨文档', category: '工具', url: 'https://shimo.im', desc: '专业的在线协作文档工具' },
+                { id: 74, name: '有道云笔记', category: '工具', url: 'https://note.youdao.com', desc: '网易推出的云笔记工具' },
+                { id: 75, name: 'WPS Office', category: '软件下载', url: 'https://www.wps.cn', desc: '金山办公推出的办公软件' },
+                { id: 76, name: '迅雷', category: '软件下载', url: 'https://www.xunlei.com', desc: '专业的下载工具' },
+                { id: 77, name: '暴风影音', category: '软件下载', url: 'https://www.baofeng.com', desc: '专业的视频播放软件' },
+                { id: 78, name: 'PotPlayer', category: '软件下载', url: 'https://potplayer.daum.net', desc: '功能强大的视频播放器' },
+                { id: 79, name: 'WinRAR', category: '软件下载', url: 'https://www.win-rar.com', desc: '专业的压缩解压软件' },
+                { id: 80, name: '7-Zip', category: '软件下载', url: 'https://www.7-zip.org', desc: '开源的压缩解压软件' },
+                { id: 81, name: 'Epic Games', category: '游戏下载', url: 'https://store.epicgames.com', desc: 'Epic推出的游戏平台' },
+                { id: 82, name: 'Origin', category: '游戏下载', url: 'https://www.origin.com', desc: 'EA推出的游戏平台' },
+                { id: 83, name: 'Uplay', category: '游戏下载', url: 'https://uplay.ubisoft.com', desc: '育碧推出的游戏平台' },
+                { id: 84, name: '战网', category: '游戏下载', url: 'https://www.blizzard.com', desc: '暴雪推出的游戏平台' },
+                { id: 85, name: 'IndieDB', category: '游戏下载', url: 'https://www.indiedb.com', desc: '独立游戏下载网站' },
+                { id: 86, name: 'QQ邮箱', category: '邮箱', url: 'https://mail.qq.com', desc: '腾讯推出的电子邮件服务' },
+                { id: 87, name: '126邮箱', category: '邮箱', url: 'https://mail.126.com', desc: '网易推出的电子邮件服务' },
+                { id: 88, name: 'Yeah邮箱', category: '邮箱', url: 'https://mail.yeah.net', desc: '网易推出的电子邮件服务' },
+                { id: 89, name: 'Foxmail', category: '邮箱', url: 'https://www.foxmail.com', desc: '腾讯推出的邮件客户端' },
+                { id: 90, name: 'QQ游戏', category: '网页小游戏', url: 'https://game.qq.com', desc: '腾讯推出的游戏平台' },
+                { id: 91, name: '开心网', category: '网页小游戏', url: 'https://www.kaixin001.com', desc: '社交游戏网站' },
+                { id: 92, name: '人人网', category: '网页小游戏', url: 'https://www.renren.com', desc: '社交网络服务网站' },
+                { id: 93, name: '51小游戏', category: '网页小游戏', url: 'https://www.51.com', desc: '专业的游戏网站' },
+                { id: 94, name: 'YY直播', category: '有趣', url: 'https://www.yy.com', desc: '专业的直播平台' },
+                { id: 95, name: '斗鱼直播', category: '有趣', url: 'https://www.douyu.com', desc: '专业的游戏直播平台' },
+                { id: 96, name: '虎牙直播', category: '有趣', url: 'https://www.huya.com', desc: '专业的游戏直播平台' },
+                { id: 97, name: '花椒直播', category: '有趣', url: 'https://www.huajiao.com', desc: '移动社交直播平台' },
+                { id: 98, name: '映客直播', category: '有趣', url: 'https://www.inke.cn', desc: '移动直播平台' },
+                { id: 99, name: '一直播', category: '有趣', url: 'https://www.yizhibo.com', desc: '移动直播平台' },
+                { id: 100, name: '美拍', category: '有趣', url: 'https://www.meipai.com', desc: '短视频分享平台' },
+                { id: 101, name: '网易公开课', category: '教育', url: 'https://open.163.com', desc: '中国领先的在线教育平台' },
+                { id: 102, name: '腾讯课堂', category: '教育', url: 'https://ke.qq.com', desc: '专业的在线教育平台' },
+                { id: 103, name: '慕课网', category: '教育', url: 'https://www.imooc.com', desc: 'IT技能学习平台' },
+                { id: 104, name: '学堂在线', category: '教育', url: 'https://www.xuetangx.com', desc: '清华大学发起的MOOC平台' },
+                { id: 105, name: '中国大学MOOC', category: '教育', url: 'https://www.icourse163.org', desc: '中国最大的MOOC平台' },
+                { id: 106, name: '知乎Live', category: '教育', url: 'https://www.zhihu.com/lives', desc: '知乎的付费直播讲座平台' },
+                { id: 107, name: '得到', category: '教育', url: 'https://www.igetget.com', desc: '知识服务应用' },
+                { id: 108, name: '喜马拉雅', category: '教育', url: 'https://www.ximalaya.com', desc: '专业的音频分享平台' },
+                { id: 109, name: '蜻蜓FM', category: '教育', url: 'https://www.qingting.fm', desc: '网络音频应用' },
+                { id: 110, name: '荔枝FM', category: '教育', url: 'https://www.lizhi.fm', desc: '网络音频平台' },
+                { id: 111, name: '起点中文网', category: '阅读', url: 'https://www.qidian.com', desc: '中国最大的网络文学网站' },
+                { id: 112, name: '晋江文学城', category: '阅读', url: 'http://www.jjwxc.net', desc: '女性原创文学网站' },
+                { id: 113, name: '纵横中文网', category: '阅读', url: 'http://www.zongheng.com', desc: '原创小说门户网站' },
+                { id: 114, name: '17K小说网', category: '阅读', url: 'https://www.17k.com', desc: '原创小说阅读网站' },
+                { id: 115, name: '飞卢小说网', category: '阅读', url: 'https://b.faloo.com', desc: '原创小说网站' },
+                { id: 116, name: '纵横小说', category: '阅读', url: 'http://book.zongheng.com', desc: '原创小说阅读平台' },
+                { id: 117, name: '书旗小说', category: '阅读', url: 'https://www.shuqireader.com', desc: '阿里文学旗下阅读平台' },
+                { id: 118, name: 'QQ阅读', category: '阅读', url: 'https://book.qq.com', desc: '腾讯文学旗下阅读平台' },
+                { id: 119, name: '百度阅读', category: '阅读', url: 'https://yuedu.baidu.com', desc: '百度旗下的电子书阅读平台' },
+                { id: 120, name: '多看阅读', category: '阅读', url: 'https://www.duokan.com', desc: '小米旗下的电子书阅读平台' },
+                { id: 121, name: '豆瓣阅读', category: '阅读', url: 'https://read.douban.com', desc: '豆瓣旗下的电子书平台' },
+                { id: 122, name: '网易严选', category: '购物', url: 'https://you.163.com', desc: '网易自营的生活家居品牌' },
+                { id: 123, name: '小米有品', category: '购物', url: 'https://you.mi.com', desc: '小米旗下精品生活电商平台' },
+                { id: 124, name: '苏宁易购', category: '购物', url: 'https://www.suning.com', desc: '苏宁旗下综合购物平台' },
+                { id: 125, name: '国美在线', category: '购物', url: 'https://www.gome.com.cn', desc: '国美旗下综合购物平台' },
+                { id: 126, name: '当当网', category: '购物', url: 'https://www.dangdang.com', desc: '综合性网上购物商城' },
+                { id: 127, name: '亚马逊', category: '购物', url: 'https://www.amazon.cn', desc: '全球最大的电子商务平台' },
+                { id: 128, name: '1号店', category: '购物', url: 'https://www.yhd.com', desc: '综合性网上购物商城' },
+                { id: 129, name: '聚美优品', category: '购物', url: 'https://www.jumei.com', desc: '化妆品限时特卖商城' },
+                { id: 130, name: '蘑菇街', category: '购物', url: 'https://www.mogujie.com', desc: '女性时尚电商平台' },
+                { id: 131, name: '美丽说', category: '购物', url: 'https://www.meilishuo.com', desc: '女性时尚购物社区' },
+                { id: 132, name: '楚楚街', category: '购物', url: 'https://www.chuchujie.com', desc: '9.9元特卖平台' },
+                { id: 133, name: '卷皮网', category: '购物', url: 'https://www.juanpi.com', desc: '折扣特卖电商平台' },
+                { id: 134, name: '折800', category: '购物', url: 'https://www.zhe800.com', desc: '限时折扣特卖平台' },
+                { id: 135, name: '返利网', category: '购物', url: 'https://www.fanli.com', desc: '网购返利平台' },
+                { id: 136, name: '什么值得买', category: '购物', url: 'https://www.smzdm.com', desc: '中立的消费决策平台' },
+                { id: 137, name: '天天特价', category: '购物', url: 'https://tejia.taobao.com', desc: '淘宝旗下的特价频道' },
+                { id: 138, name: '京东秒杀', category: '购物', url: 'https://miaosha.jd.com', desc: '京东旗下的秒杀频道' },
+                { id: 139, name: '拼多多百亿补贴', category: '购物', url: 'https://pinduoduo.com/baiyi', desc: '拼多多百亿补贴频道' },
+                { id: 140, name: '美团', category: '生活', url: 'https://www.meituan.com', desc: '综合性生活服务电商平台' },
+                { id: 141, name: '饿了么', category: '生活', url: 'https://www.ele.me', desc: '在线外卖订餐平台' },
+                { id: 142, name: '大众点评', category: '生活', url: 'https://www.dianping.com', desc: '本地生活信息及交易平台' },
+                { id: 143, name: '58同城', category: '生活', url: 'https://www.58.com', desc: '本地生活服务平台' },
+                { id: 144, name: '赶集网', category: '生活', url: 'https://www.ganji.com', desc: '本地生活服务平台' },
+                { id: 145, name: '安居客', category: '生活', url: 'https://www.anjuke.com', desc: '房地产信息服务平台' },
+                { id: 146, name: '链家', category: '生活', url: 'https://www.lianjia.com', desc: '房地产经纪服务平台' },
+                { id: 147, name: '贝壳找房', category: '生活', url: 'https://www.ke.com', desc: '品质居住服务平台' },
+                { id: 148, name: '自如', category: '生活', url: 'https://www.ziroom.com', desc: '品质居住服务平台' },
+                { id: 149, name: '途牛旅游', category: '生活', url: 'https://www.tuniu.com', desc: '在线旅游服务提供商' },
+                { id: 150, name: '携程', category: '生活', url: 'https://www.ctrip.com', desc: '一站式旅行服务平台' },
+                { id: 151, name: '去哪儿', category: '生活', url: 'https://www.qunar.com', desc: '在线旅行服务平台' },
+                { id: 152, name: '马蜂窝', category: '生活', url: 'https://www.mafengwo.cn', desc: '旅游攻略平台' },
+                { id: 153, name: '飞猪', category: '生活', url: 'https://www.fliggy.com', desc: '阿里旗下旅行服务平台' },
+                { id: 154, name: '同程旅游', category: '生活', url: 'https://www.ly.com', desc: '一站式旅游预订平台' },
+                { id: 155, name: '艺龙旅行', category: '生活', url: 'https://www.elong.com', desc: '在线旅行服务网站' },
+                { id: 156, name: '滴滴出行', category: '生活', url: 'https://www.xiaojukeji.com', desc: '一站式移动出行平台' },
+                { id: 157, name: '神州专车', category: '生活', url: 'https://www.10101111.com', desc: '高品质专车服务' },
+                { id: 158, name: '首汽约车', category: '生活', url: 'https://www.shouqiche.com', desc: '国宾级网约车服务' },
+                { id: 159, name: '曹操出行', category: '生活', url: 'https://www.caocaokeji.com', desc: '新能源汽车出行平台' },
+                { id: 160, name: '哈啰出行', category: '生活', url: 'https://www.hellobike.com', desc: '一站式移动出行平台' },
+                { id: 161, name: '摩拜单车', category: '生活', url: 'https://mobike.com', desc: '智能共享单车平台' },
+                { id: 162, name: 'ofo小黄车', category: '生活', url: 'https://www.ofo.com', desc: '无桩共享单车平台' },
+                { id: 163, name: '青桔单车', category: '生活', url: 'https://www.didiglobal.com', desc: '滴滴旗下共享单车平台' },
+                { id: 164, name: '美团打车', category: '生活', url: 'https://dache.meituan.com', desc: '美团旗下打车平台' },
+                { id: 165, name: '高德打车', category: '生活', url: 'https://dache.amap.com', desc: '高德旗下打车平台' },
+                { id: 166, name: '百度地图', category: '工具', url: 'https://map.baidu.com', desc: '百度推出的地图服务' },
+                { id: 167, name: '腾讯地图', category: '工具', url: 'https://map.qq.com', desc: '腾讯推出的地图服务' },
+                { id: 168, name: '搜狗地图', category: '工具', url: 'https://map.sogou.com', desc: '搜狗推出的地图服务' },
+                { id: 169, name: '百度翻译', category: '工具', url: 'https://fanyi.baidu.com', desc: '百度推出的在线翻译工具' },
+                { id: 170, name: '有道翻译', category: '工具', url: 'https://fanyi.youdao.com', desc: '网易推出的在线翻译工具' },
+                { id: 171, name: '谷歌翻译', category: '工具', url: 'https://translate.google.cn', desc: '谷歌推出的在线翻译工具' },
+                { id: 172, name: '金山词霸', category: '工具', url: 'https://www.iciba.com', desc: '金山推出的词典工具' },
+                { id: 173, name: '海词词典', category: '工具', url: 'https://dict.cn', desc: '专业的在线词典' },
+                { id: 174, name: '有道词典', category: '工具', url: 'https://dict.youdao.com', desc: '网易推出的词典工具' },
+                { id: 175, name: '百度文库', category: '工具', url: 'https://wenku.baidu.com', desc: '百度推出的文档分享平台' },
+                { id: 176, name: '道客巴巴', category: '工具', url: 'https://www.doc88.com', desc: '在线文档分享平台' },
+                { id: 177, name: '豆丁网', category: '工具', url: 'https://www.docin.com', desc: '文档分享平台' },
+                { id: 178, name: '百度云', category: '工具', url: 'https://pan.baidu.com', desc: '百度推出的云存储服务' },
+                { id: 179, name: '天翼云盘', category: '工具', url: 'https://cloud.189.cn', desc: '中国电信推出的云存储服务' },
+                { id: 180, name: '和彩云', category: '工具', url: 'https://caiyun.139.com', desc: '中国移动推出的云存储服务' },
+                { id: 181, name: '微云', category: '工具', url: 'https://www.weiyun.com', desc: '腾讯推出的云存储服务' },
+                { id: 182, name: '坚果云', category: '工具', url: 'https://www.jianguoyun.com', desc: '专业的云存储服务' },
+                { id: 183, name: '115网盘', category: '工具', url: 'https://115.com', desc: '专业的云存储服务' },
+                { id: 184, name: '迅雷云盘', category: '工具', url: 'https://pan.xunlei.com', desc: '迅雷推出的云存储服务' },
+                { id: 185, name: '夸克网盘', category: '工具', url: 'https://pan.quark.cn', desc: '阿里推出的云存储服务' },
+                { id: 186, name: '百度日历', category: '工具', url: 'https://rili.baidu.com', desc: '百度推出的日历工具' },
+                { id: 187, name: '万年历', category: '工具', url: 'https://www.51wnl.com', desc: '专业的日历查询网站' },
+                { id: 188, name: '中华万年历', category: '工具', url: 'https://www.10000li.com', desc: '专业的日历查询网站' },
+                { id: 189, name: '日历网', category: '工具', url: 'https://www.rili.com.cn', desc: '专业的日历查询网站' },
+                { id: 190, name: '天气通', category: '工具', url: 'https://www.tianqitong.com', desc: '专业的天气查询网站' },
+                { id: 191, name: '中国天气网', category: '工具', url: 'https://www.weather.com.cn', desc: '中国气象局官方天气网站' },
+                { id: 192, name: '墨迹天气', category: '工具', url: 'https://tianqi.moji.com', desc: '专业的天气服务应用' },
+                { id: 193, name: '彩云天气', category: '工具', url: 'https://caiyunapp.com', desc: '分钟级天气预报应用' },
+                { id: 194, name: '和风天气', category: '工具', url: 'https://www.qweather.com', desc: '全球天气服务应用' },
+                { id: 195, name: '快递100', category: '工具', url: 'https://www.kuaidi100.com', desc: '快递查询服务网站' },
+                { id: 196, name: '快递网', category: '工具', url: 'https://www.kuaidi.com', desc: '快递查询服务网站' },
+                { id: 197, name: '快递帮', category: '工具', url: 'https://www.kuaidibang.com', desc: '快递查询服务网站' },
+                { id: 198, name: '快递鸟', category: '工具', url: 'https://www.kdniao.com', desc: '快递查询接口服务' },
+                { id: 199, name: '爱查快递', category: '工具', url: 'https://www.ickd.cn', desc: '快递查询服务网站' },
+                { id: 200, name: '快递之家', category: '工具', url: 'https://www.kuaidihome.com', desc: '快递查询服务网站' },
+                { id: 201, name: '在线小游戏', category: '网页小游戏', url: 'https://www.onlinemini.com', desc: '在线小游戏合集' },
+                { id: 202, name: '迷你世界', category: '网页小游戏', url: 'https://www.mini1.cn', desc: '沙盒游戏平台' },
+                { id: 203, name: '我的世界', category: '网页小游戏', url: 'https://www.minecraft.net', desc: '沙盒建造游戏' },
+                { id: 204, name: 'Roblox', category: '网页小游戏', url: 'https://www.roblox.com', desc: '用户创建的游戏平台' },
+                { id: 205, name: 'Agar.io', category: '网页小游戏', url: 'https://agar.io', desc: '大鱼吃小鱼游戏' },
+                { id: 206, name: 'Slither.io', category: '网页小游戏', url: 'https://slither.io', desc: '贪吃蛇大作战' },
+                { id: 207, name: 'Diep.io', category: '网页小游戏', url: 'https://diep.io', desc: '坦克射击游戏' },
+                { id: 208, name: 'Surviv.io', category: '网页小游戏', url: 'https://surviv.io', desc: '大逃杀游戏' },
+                { id: 209, name: 'ZombsRoyale.io', category: '网页小游戏', url: 'https://zombsroyale.io', desc: '大逃杀游戏' },
+                { id: 210, name: 'ShellShockers.io', category: '网页小游戏', url: 'https://shellshock.io', desc: '鸡蛋射击游戏' },
+                { id: 211, name: 'Krunker.io', category: '网页小游戏', url: 'https://krunker.io', desc: '第一人称射击游戏' },
+                { id: 212, name: 'Hole.io', category: '网页小游戏', url: 'https://hole.io', desc: '黑洞吞噬游戏' },
+                { id: 213, name: 'Paper.io', category: '网页小游戏', url: 'https://paper.io', desc: '领土占领游戏' },
+                { id: 214, name: 'Mope.io', category: '网页小游戏', url: 'https://mope.io', desc: '动物进化游戏' },
+                { id: 215, name: 'Deeeep.io', category: '网页小游戏', url: 'https://deeeep.io', desc: '深海生存游戏' },
+                { id: 216, name: 'Wormax.io', category: '网页小游戏', url: 'https://wormax.io', desc: '贪吃蛇游戏' },
+                { id: 217, name: 'Limax.io', category: '网页小游戏', url: 'https://limax.io', desc: '贪吃蛇游戏' },
+                { id: 218, name: 'Starve.io', category: '网页小游戏', url: 'https://starve.io', desc: '生存游戏' },
+                { id: 219, name: 'Moomoo.io', category: '网页小游戏', url: 'https://moomoo.io', desc: '建造生存游戏' },
+                { id: 220, name: 'BuildRoyale.io', category: '网页小游戏', url: 'https://buildroyale.io', desc: '建造射击游戏' },
+                { id: 221, name: 'Surviv2.io', category: '网页小游戏', url: 'https://surviv2.io', desc: '大逃杀游戏' },
+                { id: 222, name: 'BattleRoyale.io', category: '网页小游戏', url: 'https://battleroyale.io', desc: '大逃杀游戏' },
+                { id: 223, name: 'Royale.io', category: '网页小游戏', url: 'https://royale.io', desc: '大逃杀游戏' },
+                { id: 224, name: 'Gats.io', category: '网页小游戏', url: 'https://gats.io', desc: '射击游戏' },
+                { id: 225, name: 'Vertix.io', category: '网页小游戏', url: 'https://vertix.io', desc: '射击游戏' },
+                { id: 226, name: 'Wilds.io', category: '网页小游戏', url: 'https://wilds.io', desc: '动作游戏' },
+                { id: 227, name: 'Battlerite.io', category: '网页小游戏', url: 'https://battlerite.io', desc: '竞技游戏' },
+                { id: 228, name: 'Raze.io', category: '网页小游戏', url: 'https://raze.io', desc: '射击游戏' },
+                { id: 229, name: 'Ducklings.io', category: '网页小游戏', url: 'https://ducklings.io', desc: '收集游戏' },
+                { id: 230, name: 'Snowball.io', category: '网页小游戏', url: 'https://snowball.io', desc: '雪球对战游戏' },
+                { id: 231, name: 'Krew.io', category: '网页小游戏', url: 'https://krew.io', desc: '海盗射击游戏' },
+                { id: 232, name: 'Narwhale.io', category: '网页小游戏', url: 'https://narwhale.io', desc: '独角鲸对战游戏' },
+                { id: 233, name: 'Brutal.io', category: '网页小游戏', url: 'https://brutal.io', desc: '射击游戏' },
+                { id: 234, name: 'Splix.io', category: '网页小游戏', url: 'https://splix.io', desc: '领土占领游戏' },
+                { id: 235, name: 'Orbital.io', category: '网页小游戏', url: 'https://orbital.io', desc: '轨道射击游戏' },
+                { id: 236, name: 'Tanks.io', category: '网页小游戏', url: 'https://tanks.io', desc: '坦克射击游戏' },
+                { id: 237, name: 'Warbot.io', category: '网页小游戏', url: 'https://warbot.io', desc: '机器人对战游戏' },
+                { id: 238, name: 'Driftin.io', category: '网页小游戏', url: 'https://driftin.io', desc: '赛车游戏' },
+                { id: 239, name: 'HaxBall', category: '网页小游戏', url: 'https://www.haxball.com', desc: '足球游戏' },
+                { id: 240, name: 'Bonk.io', category: '网页小游戏', url: 'https://bonk.io', desc: '物理对战游戏' },
+                { id: 241, name: 'Moomoo.io', category: '网页小游戏', url: 'https://moomoo.io', desc: '建造生存游戏' },
+                { id: 242, name: 'Spinz.io', category: '网页小游戏', url: 'https://spinz.io', desc: '旋转射击游戏' },
+                { id: 243, name: 'Fidget.io', category: '网页小游戏', url: 'https://fidget.io', desc: '解压游戏' },
+                { id: 244, name: 'Hexar.io', category: '网页小游戏', url: 'https://hexar.io', desc: '六边形占领游戏' },
+                { id: 245, name: 'Lordz2.io', category: '网页小游戏', url: 'https://lordz2.io', desc: '策略游戏' },
+                { id: 246, name: 'Pikes.io', category: '网页小游戏', url: 'https://pikes.io', desc: '长矛对战游戏' },
+                { id: 247, name: 'Deepest.io', category: '网页小游戏', url: 'https://deepest.io', desc: '深海生存游戏' },
+                { id: 248, name: 'Oceanar.io', category: '网页小游戏', url: 'https://oceanar.io', desc: '海洋生存游戏' },
+                { id: 249, name: 'Fishao', category: '网页小游戏', url: 'https://www.fishao.com', desc: '钓鱼游戏' },
+                { id: 250, name: 'AdventureQuest', category: '网页小游戏', url: 'https://www.battleon.com', desc: 'RPG游戏' },
+                { id: 251, name: 'DragonFable', category: '网页小游戏', url: 'https://www.dragonfable.com', desc: 'RPG游戏' },
+                { id: 252, name: 'MechQuest', category: '网页小游戏', url: 'https://www.mechquest.com', desc: '机甲游戏' },
+                { id: 253, name: 'EpicDuel', category: '网页小游戏', url: 'https://epicduel.battleon.com', desc: '对战游戏' },
+                { id: 254, name: 'AdventureQuest Worlds', category: '网页小游戏', url: 'https://www.aq.com', desc: 'MMORPG游戏' },
+                { id: 255, name: 'OGame', category: '网页小游戏', url: 'https://ogame.org', desc: '太空策略游戏' },
+                { id: 256, name: 'Travian', category: '网页小游戏', url: 'https://www.travian.com', desc: '策略游戏' },
+                { id: 257, name: 'Ikariam', category: '网页小游戏', url: 'https://www.ikariam.com', desc: '策略游戏' },
+                { id: 258, name: 'Grepolis', category: '网页小游戏', url: 'https://grepolis.com', desc: '策略游戏' },
+                { id: 259, name: 'Forge of Empires', category: '网页小游戏', url: 'https://forgeofempires.com', desc: '策略游戏' },
+                { id: 260, name: 'Elvenar', category: '网页小游戏', url: 'https://www.elvenar.com', desc: '策略游戏' },
+                { id: 261, name: 'Tribal Wars', category: '网页小游戏', url: 'https://www.tribalwars.net', desc: '策略游戏' },
+                { id: 262, name: 'The West', category: '网页小游戏', url: 'https://www.the-west.net', desc: '西部牛仔游戏' },
+                { id: 263, name: 'Battlestar Galactica', category: '网页小游戏', url: 'https://en.bsg.gameforge.com', desc: '太空战斗游戏' },
+                { id: 264, name: 'DarkOrbit', category: '网页小游戏', url: 'https://darkorbit.bigpoint.com', desc: '太空射击游戏' },
+                { id: 265, name: 'Seafight', category: '网页小游戏', url: 'https://seafight.bigpoint.com', desc: '海盗战斗游戏' },
+                { id: 266, name: 'Drakensang', category: '网页小游戏', url: 'https://drakensang.bigpoint.com', desc: 'RPG游戏' },
+                { id: 267, name: 'Rising Cities', category: '网页小游戏', url: 'https://risingcities.bigpoint.com', desc: '城市建设游戏' },
+                { id: 268, name: 'Farmerama', category: '网页小游戏', url: 'https://farmerama.bigpoint.com', desc: '农场游戏' },
+                { id: 269, name: 'Zoomumba', category: '网页小游戏', url: 'https://zoomumba.bigpoint.com', desc: '动物园游戏' },
+                { id: 270, name: 'KartRider', category: '网页小游戏', url: 'https://kart.nexon.com', desc: '赛车游戏' },
+                { id: 271, name: 'CrazyGames', category: '网页小游戏', url: 'https://www.crazygames.com', desc: '在线小游戏平台' },
+                { id: 272, name: 'Poki', category: '网页小游戏', url: 'https://poki.com', desc: '在线小游戏平台' },
+                { id: 273, name: 'Armor Games', category: '网页小游戏', url: 'https://armorgames.com', desc: '在线小游戏平台' },
+                { id: 274, name: 'Kongregate', category: '网页小游戏', url: 'https://www.kongregate.com', desc: '在线小游戏平台' },
+                { id: 275, name: 'Newgrounds', category: '网页小游戏', url: 'https://www.newgrounds.com', desc: '在线小游戏平台' },
+                { id: 276, name: 'Miniclip', category: '网页小游戏', url: 'https://www.miniclip.com', desc: '在线小游戏平台' },
+                { id: 277, name: 'Addicting Games', category: '网页小游戏', url: 'https://www.addictinggames.com', desc: '在线小游戏平台' },
+                { id: 278, name: 'Y8', category: '网页小游戏', url: 'https://www.y8.com', desc: '在线小游戏平台' },
+                { id: 279, name: 'Coolmath Games', category: '网页小游戏', url: 'https://www.coolmathgames.com', desc: '数学小游戏' },
+                { id: 280, name: 'Math Playground', category: '网页小游戏', url: 'https://www.mathplayground.com', desc: '数学小游戏' },
+                { id: 281, name: 'Funbrain', category: '网页小游戏', url: 'https://www.funbrain.com', desc: '儿童小游戏' },
+                { id: 282, name: 'PBS Kids', category: '网页小游戏', url: 'https://pbskids.org', desc: '儿童小游戏' },
+                { id: 283, name: 'ABCya', category: '网页小游戏', url: 'https://www.abcya.com', desc: '儿童小游戏' },
+                { id: 284, name: 'Starfall', category: '网页小游戏', url: 'https://www.starfall.com', desc: '儿童学习游戏' },
+                { id: 285, name: 'Nick Jr', category: '网页小游戏', url: 'https://www.nickjr.com', desc: '儿童小游戏' },
+                { id: 286, name: 'Disney Games', category: '网页小游戏', url: 'https://games.disney.com', desc: '迪士尼游戏' },
+                { id: 287, name: 'Cartoon Network Games', category: '网页小游戏', url: 'https://www.cartoonnetwork.com/games', desc: '卡通网络游戏' },
+                { id: 288, name: 'Nickelodeon Games', category: '网页小游戏', url: 'https://www.nick.com/games', desc: '尼克儿童游戏' },
+                { id: 289, name: 'Lego Games', category: '网页小游戏', url: 'https://www.lego.com/en-us/games', desc: '乐高游戏' },
+                { id: 290, name: 'Hasbro Games', category: '网页小游戏', url: 'https://www.hasbro.com/en-us/games', desc: '孩之宝游戏' },
+                { id: 291, name: 'Mattel Games', category: '网页小游戏', url: 'https://www.mattel.com/en-us/games', desc: '美泰游戏' },
+                { id: 292, name: 'Barbie Games', category: '网页小游戏', url: 'https://www.barbie.com/en-us/games', desc: '芭比游戏' },
+                { id: 293, name: 'Hot Wheels Games', category: '网页小游戏', url: 'https://www.hotwheels.com/games', desc: '风火轮游戏' },
+                { id: 294, name: 'Monster High Games', category: '网页小游戏', url: 'https://www.monsterhigh.com/en-us/games', desc: '怪物高中游戏' },
+                { id: 295, name: 'Ever After High Games', category: '网页小游戏', url: 'https://www.everafterhigh.com/en-us/games', desc: '童话高中游戏' },
+                { id: 296, name: 'American Girl Games', category: '网页小游戏', url: 'https://www.americangirl.com/play', desc: '美国女孩游戏' },
+                { id: 297, name: 'Littlest Pet Shop Games', category: '网页小游戏', url: 'https://www.littlestpetshop.com/games', desc: '小小宠物店游戏' },
+                { id: 298, name: 'My Little Pony Games', category: '网页小游戏', url: 'https://www.hasbro.com/mylittlepony/en_US', desc: '小马宝莉游戏' },
+                { id: 299, name: 'Transformers Games', category: '网页小游戏', url: 'https://www.hasbro.com/transformers/en_US', desc: '变形金刚游戏' },
+                { id: 300, name: 'Nerf Games', category: '网页小游戏', url: 'https://www.hasbro.com/nerf/en_US', desc: 'Nerf玩具游戏' }
+            ];
+            
+            function renderWebsites(websitesToRender) {
+                const container = document.getElementById('websites-container');
+                container.innerHTML = '';
+                
+                websitesToRender.forEach(website => {
+                    const card = document.createElement('div');
+                    card.className = 'website-card';
+                    card.setAttribute('data-id', website.id);
+                    card.setAttribute('data-name', website.name);
+                    card.setAttribute('data-category', website.category);
+                    
+                    card.innerHTML = `
+                        <div class="website-header">
+                            <h3 class="website-name">${website.name}</h3>
+                            <button class="favorite-btn" data-id="${website.id}">☆</button>
+                        </div>
+                        <p class="website-desc">${website.desc}</p>
+                        <a href="${website.url}" target="_blank" class="website-link">${website.url}</a>
+                    `;
+                    
+                    container.appendChild(card);
+                });
+                
+                loadFavorites();
+            }
+            
+            function filterWebsites(searchTerm, showFavoritesOnly) {
+                const favorites = getFavorites();
+                const filteredWebsites = websites.filter(website => {
+                    const matchesSearch = website.name.toLowerCase().includes(searchTerm) || 
+                                         website.desc.toLowerCase().includes(searchTerm) ||
+                                         website.category.toLowerCase().includes(searchTerm) ||
+                                         website.url.toLowerCase().includes(searchTerm);
+                    const matchesFavorite = !showFavoritesOnly || favorites.includes(String(website.id));
+                    return matchesSearch && matchesFavorite;
+                });
+                
+                renderWebsites(filteredWebsites);
+                
+                const noResults = document.getElementById('no-results');
+                if (filteredWebsites.length === 0) {
+                    noResults.style.display = 'flex';
+                } else {
+                    noResults.style.display = 'none';
+                }
+            }
+            
+            function showWelcomeAnimation() {
+                const welcomeAnimation = document.getElementById('welcome-animation');
+                const welcomeText = document.getElementById('welcome-text');
+                
+                welcomeAnimation.style.display = 'flex';
+                
+                setTimeout(() => {
+                    welcomeAnimation.classList.add('show');
+                }, 100);
+                
+                setTimeout(() => {
+                    welcomeAnimation.classList.add('fade-out');
+                }, 3000);
+                
+                setTimeout(() => {
+                    welcomeAnimation.style.display = 'none';
+                    welcomeAnimation.classList.remove('show', 'fade-out');
+                }, 5000);
+                
+                const sideDecorations = document.querySelectorAll('.side-decoration');
+                sideDecorations.forEach(decoration => {
+                    decoration.classList.add('zhenxinhua-style');
+                });
+                
+                if ('speechSynthesis' in window) {
+                    const utterance = new SpeechSynthesisUtterance('欢迎你真心话，祝你天天开心，万事如意，心想事成，前程似锦！');
+                    utterance.lang = 'zh-CN';
+                    utterance.rate = 0.5;
+                    utterance.pitch = 1;
+                    utterance.volume = 1;
+                    window.speechSynthesis.speak(utterance);
+                }
+            }
+            
             function updateLoginState() {
                 if (isLoggedIn && currentUsername) {
                     loginBtn.textContent = '退出登录';
@@ -279,7 +574,11 @@
                     usernameBackground.style.display = 'flex';
                     
                     if (welcomeMessage) {
-                        welcomeMessage.textContent = '你好' + currentUsername;
+                        if (currentUsername === '真心话') {
+                            welcomeMessage.textContent = '你好' + currentUsername + '（书记抖音粉丝）';
+                        } else {
+                            welcomeMessage.textContent = '你好' + currentUsername;
+                        }
                     }
                     
                     const sideDecorations = document.querySelectorAll('.side-decoration');
@@ -362,30 +661,6 @@
                 loadFavorites();
             }
             
-            function filterWebsites(searchTerm = '', showFavoritesOnly = false) {
-                const websiteCards = document.querySelectorAll('.website-card');
-                let visibleCount = 0;
-                
-                websiteCards.forEach(card => {
-                    const name = card.getAttribute('data-name').toLowerCase();
-                    const category = card.getAttribute('data-category').toLowerCase();
-                    const websiteId = card.getAttribute('data-id');
-                    const favorites = getFavorites();
-                    
-                    const matchesSearch = name.includes(searchTerm) || category.includes(searchTerm);
-                    const matchesFavorite = !showFavoritesOnly || favorites.includes(websiteId);
-                    
-                    if (matchesSearch && matchesFavorite) {
-                        card.style.display = 'block';
-                        visibleCount++;
-                    } else {
-                        card.style.display = 'none';
-                    }
-                });
-                
-                noResults.style.display = visibleCount === 0 ? 'flex' : 'none';
-            }
-            
             function updateCurrentDate() {
                 const now = new Date();
                 const year = now.getFullYear();
@@ -397,6 +672,7 @@
                 }
             }
             
+            renderWebsites(websites);
             updateLoginState();
             updateCurrentDate();
             
@@ -443,6 +719,10 @@
                     localStorage.setItem('isLoggedIn', 'true');
                     localStorage.setItem('currentUsername', username);
                     loginBtn.textContent = '退出登录';
+                    
+                    if (username === '真心话') {
+                        showWelcomeAnimation();
+                    }
                     
                     usernameText.textContent = username;
                     usernameBackground.style.display = 'flex';
@@ -504,5 +784,10 @@
             setInterval(updateCurrentDate, 1000);
         });
     </script>
+    
+    <!-- 真心话登录欢迎动画 -->
+    <div class="welcome-animation" id="welcome-animation">
+        <div class="welcome-text" id="welcome-text">欢迎你——真心话</div>
+    </div>
 </body>
 </html>

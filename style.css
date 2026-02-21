@@ -1262,6 +1262,29 @@ body {
     display: flex;
     gap: 10px;
     margin-top: 15px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.websites-controls .search-box {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    padding: 0 15px;
+    flex: 1;
+    min-width: 200px;
+}
+
+.websites-controls .search-input {
+    color: #333;
+    width: 100%;
+}
+
+.websites-controls .search-input::placeholder {
+    color: #999;
+}
+
+.websites-controls .search-btn {
+    color: #667eea;
 }
 
 .control-btn {
@@ -1288,18 +1311,75 @@ body {
 
 .websites-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-template-columns: repeat(6, 1fr);
     gap: 20px;
     margin-bottom: 20px;
+}
+
+@media (max-width: 1600px) {
+    .websites-container {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+@media (max-width: 1400px) {
+    .websites-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 1200px) {
+    .websites-container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+    }
+}
+
+@media (max-width: 900px) {
+    .websites-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+}
+
+@media (max-width: 600px) {
+    .websites-container {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
 }
 
 .website-card {
     background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
     border-radius: 10px;
-    padding: 20px;
+    padding: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
     position: relative;
+    min-height: 90px;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 1200px) {
+    .website-card {
+        padding: 8px;
+        min-height: 80px;
+    }
+}
+
+@media (max-width: 768px) {
+    .website-card {
+        padding: 6px;
+        min-height: 70px;
+    }
+}
+
+@media (max-width: 480px) {
+    .website-card {
+        padding: 5px;
+        min-height: 60px;
+    }
 }
 
 .website-card:hover {
@@ -1311,11 +1391,11 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .website-name {
-    font-size: 18px;
+    font-size: 14px;
     font-weight: bold;
     color: #333;
     margin: 0;
@@ -1324,7 +1404,7 @@ body {
 .favorite-btn {
     background: none;
     border: none;
-    font-size: 24px;
+    font-size: 18px;
     cursor: pointer;
     color: #999;
     transition: all 0.3s ease;
@@ -1341,15 +1421,15 @@ body {
 }
 
 .website-desc {
-    font-size: 14px;
+    font-size: 11px;
     color: #666;
-    margin-bottom: 15px;
-    line-height: 1.5;
+    margin-bottom: 8px;
+    line-height: 1.3;
 }
 
 .website-link {
     display: block;
-    font-size: 12px;
+    font-size: 10px;
     color: #667eea;
     text-decoration: none;
     word-break: break-all;
@@ -1372,5 +1452,156 @@ body {
     
     .control-btn {
         width: 100%;
+    }
+}
+
+/* 真心话登录欢迎动画 */
+.welcome-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.welcome-animation.show {
+    opacity: 1;
+}
+
+.welcome-animation.fade-out {
+    opacity: 0;
+}
+
+.welcome-text {
+    font-family: '华文行楷', 'STXingkai', 'Xingkai SC', '楷体', serif;
+    font-size: 8vw;
+    font-weight: bold;
+    color: #ff0000;
+    text-align: center;
+    animation: colorChange 3s ease-in-out, drumSound 0.5s ease-out;
+}
+
+@keyframes colorChange {
+    0% {
+        color: #ff0000;
+        transform: scale(0.5);
+    }
+    30% {
+        color: #000000;
+        transform: scale(1);
+    }
+    60% {
+        color: #000000;
+        transform: scale(1);
+    }
+    100% {
+        color: rgba(0, 0, 0, 0.3);
+        transform: scale(1);
+    }
+}
+
+@keyframes drumSound {
+    0% {
+        transform: scale(0.5);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* 真心话登录后的侧边装饰样式 */
+.side-decoration.zhenxinhua-style .side-text {
+    font-size: 80px;
+    color: rgba(0, 0, 0, 0.2);
+    transition: all 0.5s ease;
+}
+
+@media (max-width: 768px) {
+    .side-decoration.zhenxinhua-style .side-text {
+        font-size: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .side-decoration.zhenxinhua-style .side-text {
+        font-size: 48px;
+    }
+}
+
+/* 粉丝登录动画 */
+.nav-link.fan-animation {
+    position: relative;
+    animation: fanGlow 2s ease-in-out infinite;
+}
+
+.nav-link.fan-animation::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border: 2px solid #ff6b6b;
+    border-radius: 5px;
+    animation: fanBorder 2s linear infinite;
+}
+
+.nav-link.fan-animation::after {
+    content: '⭐';
+    position: absolute;
+    top: -15px;
+    right: -10px;
+    font-size: 16px;
+    animation: starTwinkle 1s ease-in-out infinite;
+}
+
+@keyframes fanGlow {
+    0%, 100% {
+        text-shadow: 0 0 5px rgba(255, 107, 107, 0.5);
+    }
+    50% {
+        text-shadow: 0 0 20px rgba(255, 107, 107, 0.8), 0 0 30px rgba(255, 107, 107, 0.6);
+    }
+}
+
+@keyframes fanBorder {
+    0% {
+        border-color: #ff6b6b;
+        transform: rotate(0deg);
+    }
+    25% {
+        border-color: #ffd93d;
+    }
+    50% {
+        border-color: #6bcb77;
+        transform: rotate(180deg);
+    }
+    75% {
+        border-color: #4d96ff;
+    }
+    100% {
+        border-color: #ff6b6b;
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes starTwinkle {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.5;
+        transform: scale(1.2);
     }
 }
