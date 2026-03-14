@@ -4,6 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>大聪明大队（粑粑大队）</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="大聪明大队（粑粑大队）成立于2022年，是一支充满活力和创造力的团队。官方网站提供领导班子、成员信息、新闻动态、发展历史等内容。">
+    <meta name="keywords" content="大聪明大队,粑粑大队,团队,领导班子,成员,新闻,发展历史,官方网站">
+    <meta name="author" content="大聪明大队">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="大聪明大队（粑粑大队）">
+    <meta property="og:description" content="大聪明大队（粑粑大队）成立于2022年，是一支充满活力和创造力的团队。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://1364697858.github.io/dacongming/">
+    <meta property="og:image" content="https://1364697858.github.io/dacongming/队徽.jpg">
+    <meta property="og:site_name" content="大聪明大队">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="大聪明大队（粑粑大队）">
+    <meta name="twitter:description" content="大聪明大队（粑粑大队）成立于2022年，是一支充满活力和创造力的团队。">
+    <meta name="twitter:image" content="https://1364697858.github.io/dacongming/队徽.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://1364697858.github.io/dacongming/">
+    
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -522,6 +546,7 @@
                 
                 const userPasswords = {
                     '真心话': '0015',
+                    '张三': '123456',
                     '刘佳润': '202201',
                     '刘笑岩': '202206',
                     '于子硕': '202202',
@@ -548,9 +573,11 @@
                 const usernameBackground = document.getElementById('username-background');
                 const usernameText = document.getElementById('username-text');
                 
-                function showWelcomeAnimation() {
+                function showWelcomeAnimation(username) {
                     const welcomeAnimation = document.getElementById('welcome-animation');
                     const welcomeText = document.getElementById('welcome-text');
+                    
+                    welcomeText.textContent = '欢迎你——' + username;
                     
                     welcomeAnimation.style.display = 'flex';
                     
@@ -573,11 +600,11 @@
                     });
                     
                     if ('speechSynthesis' in window) {
-                        const utterance = new SpeechSynthesisUtterance('欢迎你真心话，祝你天天开心，万事如意，心想事成，前程似锦！');
+                        const utterance = new SpeechSynthesisUtterance('欢迎你' + username + '，祝你天天开心，万事如意，心想事成，前程似锦！');
                         utterance.lang = 'zh-CN';
-                        utterance.rate = 0.5;
+                        utterance.rate = 1;
                         utterance.pitch = 1;
-                        utterance.volume = 1;
+                        utterance.volume = 3;
                         window.speechSynthesis.speak(utterance);
                     }
                 }
@@ -592,6 +619,8 @@
                         if (welcomeMessage) {
                             if (currentUsername === '真心话') {
                                 welcomeMessage.textContent = '你好' + currentUsername + '（书记抖音粉丝）';
+                            } else if (currentUsername === '张三') {
+                                welcomeMessage.textContent = '你好' + currentUsername + '（示例用户）';
                             } else {
                                 welcomeMessage.textContent = '你好' + currentUsername;
                             }
@@ -718,8 +747,15 @@
                         localStorage.setItem('isLoggedIn', 'true');
                         localStorage.setItem('currentUsername', username);
                         
-                        if (username === '真心话') {
-                            showWelcomeAnimation();
+                        showWelcomeAnimation(username);
+                        
+                        if ('speechSynthesis' in window) {
+                            const utterance = new SpeechSynthesisUtterance('欢迎你' + username + '，祝你天天开心，万事如意，心想事成，前程似锦！');
+                            utterance.lang = 'zh-CN';
+                            utterance.rate = 1;
+                            utterance.pitch = 1;
+                            utterance.volume = 3;
+                            window.speechSynthesis.speak(utterance);
                         }
                         
                         updateLoginState();
@@ -757,6 +793,7 @@
                         <label for="username">用户名：</label>
                         <select id="username" name="username" required>
                             <option value="">请选择用户名</option>
+                            <option value="张三">张三</option>
                             <option value="真心话">真心话</option>
                             <option value="刘佳润">刘佳润</option>
                             <option value="刘笑岩">刘笑岩</option>
